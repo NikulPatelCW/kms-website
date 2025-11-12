@@ -52,7 +52,10 @@
               "outputHashing": "all",
               "allowedCommonJsDependencies": [
                 "aos"
-              ]
+              ],
+              "outputPath": "dist/browser",
+              "baseHref": "/kms-website/",
+              "deployUrl": "/kms-website/"
             },
             "development": {
               "optimization": false,
