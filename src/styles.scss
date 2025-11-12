@@ -496,7 +496,7 @@ main {
       // right: -64px;
       left: calc(100% / 1 - 528px);
       z-index: 1;
-      background-image: url('assets/images/right-dotts.png');
+      background-image: url('../public/assets/images/right-dotts.png');
       width: 100%; // desired size
       height: 100%; // desired size
       background-size: contain;
@@ -535,7 +535,7 @@ main {
           content: '';
           width: 16px;
           height: 16px;
-          background-image: url(assets/icons/right-circle.svg);
+          background-image: url("../public/assets/icons/right-circle.svg");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -747,7 +747,7 @@ main {
     bottom: -120px;
     left: -296px;
     content: '';
-    background-image: url(assets/images/kms-approach/advisory-bg.svg);
+    background-image: url("../public/assets/images/kms-approach/advisory-bg.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -772,7 +772,7 @@ main {
 ================================== */
 
 .kms-approach-strategies {
-  background-image: url('assets/images/kms-approach/kms-approach-strategies.png');
+  background-image: url('../public/assets/images/kms-approach/kms-approach-strategies.png');
   background-size: cover;
   padding-block: 100px;
   position: relative;
@@ -828,7 +828,7 @@ main {
     z-index: -1;
     bottom: -85px;
     left: -536px;
-    background-image: url('assets/images/kms-approach/advisory-bg.svg');
+    background-image: url('../public/assets/images/kms-approach/advisory-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -892,7 +892,7 @@ main {
           content: '';
           width: 16px;
           height: 16px;
-          background-image: url(assets/icons/right-circle.svg);
+          background-image: url("../public/assets/icons/right-circle.svg");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
@@ -920,7 +920,7 @@ main {
       right: 70px;
       top: 120px;
       content: '';
-      background-image: url(assets/images/plane-bg.svg);
+      background-image: url("../public/assets/images/plane-bg.svg");
       background-repeat: no-repeat;
       background-size: contain;
       width: 270px;

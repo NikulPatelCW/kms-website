@@ -31,6 +31,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create assets symlink for build
+        run: |
+          # Create symlink from src/assets to public/assets so SCSS can resolve asset paths
+          if [ ! -d "src/assets" ]; then
+            ln -s ../public/assets src/assets
+            echo "✓ Created symlink: src/assets -> public/assets"
+          else
+            echo "src/assets already exists"
+          fi
+
       - name: Build Angular app
         run: npm run build:github
 
@@ -70,6 +80,16 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Create assets symlink for build
+        run: |
+          # Create symlink from src/assets to public/assets so SCSS can resolve asset paths
+          if [ ! -d "src/assets" ]; then
+            ln -s ../public/assets src/assets
+            echo "✓ Created symlink: src/assets -> public/assets"
+          else
+            echo "src/assets already exists"
+          fi
 
       - name: Build for production
         run: npm run build:github
