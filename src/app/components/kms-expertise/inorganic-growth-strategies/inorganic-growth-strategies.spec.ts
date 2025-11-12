@@ -24,7 +24,7 @@ describe('InorganicGrowthStrategies', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('/assets/images/expertise/inorganic.png');
+    expect(component.headerBg).toBe('assets/images/expertise/inorganic.png');
     expect(component.headerTitle).toBe('Inorganic Growth Strategies');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -32,7 +32,7 @@ describe('InorganicGrowthStrategies', () => {
   it('should have sections with correct structure', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.paragraphs.length).toBe(2);
-    expect(component.sections.image).toBe('/assets/images/expertise/inorganic-img.png');
+    expect(component.sections.image).toBe('assets/images/expertise/inorganic-img.png');
     expect(component.sections.reverse).toBe(false);
   });
 

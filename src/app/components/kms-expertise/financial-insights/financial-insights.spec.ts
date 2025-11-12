@@ -24,7 +24,7 @@ describe('FinancialInsights', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('/assets/images/expertise/financial.png');
+    expect(component.headerBg).toBe('assets/images/expertise/financial.png');
     expect(component.headerTitle).toBe('Financial Insights');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -33,7 +33,7 @@ describe('FinancialInsights', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.title).toBe('');
     expect(component.sections.paragraphs.length).toBe(2);
-    expect(component.sections.image).toBe('/assets/images/expertise/financial-img.png');
+    expect(component.sections.image).toBe('assets/images/expertise/financial-img.png');
     expect(component.sections.contentBgImage).toBe(false);
     expect(component.sections.reverse).toBe(true);
   });

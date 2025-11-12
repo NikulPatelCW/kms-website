@@ -24,8 +24,8 @@ describe('Industries', () => {
   });
 
   it('should initialize header background image', () => {
-    expect(component.headerBgPath).toBe('/assets/images/header-bg/sector.png');
-    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(/assets/images/header-bg/sector.png)' });
+    expect(component.headerBgPath).toBe('assets/images/header-bg/sector.png');
+    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(assets/images/header-bg/sector.png)' });
   });
 
   it('should have 2 industry data groups', () => {

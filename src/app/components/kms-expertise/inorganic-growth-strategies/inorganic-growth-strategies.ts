@@ -8,7 +8,7 @@ import { CommonImgAndContent } from '../../../shared/components/common-img-and-c
   styleUrl: './inorganic-growth-strategies.scss',
 })
 export class InorganicGrowthStrategies {
-  headerBg = '/assets/images/expertise/inorganic.png';
+  headerBg = 'assets/images/expertise/inorganic.png';
   headerTitle = 'Inorganic Growth Strategies';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class InorganicGrowthStrategies {
       'Whether it’s local expansion or international entry, we act as both strategic advisors and Transactional support partners. We also bring a strong network of ecosystem connects, lawyers, bankers, tax advisors that strengthens our execution support capabilities. KMS ensures your inorganic moves lead to sustainable, long-term growth.',
     ],
     note: 'Joint Venture | Strategic Alliances | Deal/Transactional Structuring | Post-acquisition integration & Consolidation',
-    image: '/assets/images/expertise/inorganic-img.png',
+    image: 'assets/images/expertise/inorganic-img.png',
     contentBgImage: false,
     reverse: false,
   };

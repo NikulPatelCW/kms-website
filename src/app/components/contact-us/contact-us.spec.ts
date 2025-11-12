@@ -25,8 +25,8 @@ describe('ContactUs', () => {
   });
 
   it('should initialize header background image', () => {
-    expect(component.headerBgPath).toBe('/assets/images/header-bg/contact-us.png');
-    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(/assets/images/header-bg/contact-us.png)' });
+    expect(component.headerBgPath).toBe('assets/images/header-bg/contact-us.png');
+    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(assets/images/header-bg/contact-us.png)' });
   });
 
   it('should initialize contact form with required fields', () => {

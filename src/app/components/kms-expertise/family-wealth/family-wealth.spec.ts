@@ -24,7 +24,7 @@ describe('FamilyWealth', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('/assets/images/expertise/wealth.png');
+    expect(component.headerBg).toBe('assets/images/expertise/wealth.png');
     expect(component.headerTitle).toBe('Family Wealth');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -33,7 +33,7 @@ describe('FamilyWealth', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.title).toBe('');
     expect(component.sections.paragraphs.length).toBe(2);
-    expect(component.sections.image).toBe('/assets/images/expertise/wealth-img.png');
+    expect(component.sections.image).toBe('assets/images/expertise/wealth-img.png');
     expect(component.sections.contentBgImage).toBe(false);
     expect(component.sections.reverse).toBe(false);
   });

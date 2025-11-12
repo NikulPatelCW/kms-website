@@ -8,7 +8,7 @@ import { SharedImports } from '../../shared/shared-imports';
   styleUrl: './industries.scss',
 })
 export class Industries {
-    headerBgPath = '/assets/images/header-bg/sector.png';
+    headerBgPath = 'assets/images/header-bg/sector.png';
   headerImgStyle: any = { 'background-image': `url(${this.headerBgPath})` };
   ngOnInit() {
     this.headerImgStyle = { 'background-image': `url(${this.headerBgPath})` };

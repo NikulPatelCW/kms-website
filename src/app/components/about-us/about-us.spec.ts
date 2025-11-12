@@ -25,8 +25,8 @@ describe('AboutUs', () => {
   });
 
   it('should initialize header background image style', () => {
-    expect(component.headerBgPath).toBe('/assets/images/about-us-hero-bg.png');
-    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(/assets/images/about-us-hero-bg.png)' });
+    expect(component.headerBgPath).toBe('assets/images/about-us-hero-bg.png');
+    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(assets/images/about-us-hero-bg.png)' });
   });
 
   it('should have 4 KMS features', () => {
@@ -98,10 +98,10 @@ describe('AboutUs', () => {
     expect(featureImages.length).toBe(4);
     
     const expectedImages = [
-      '/assets/images/about/customer.svg',
-      '/assets/images/about/time-management.svg',
-      '/assets/images/about/contract.svg',
-      '/assets/images/about/thumb-up.svg'
+      'assets/images/about/customer.svg',
+      'assets/images/about/time-management.svg',
+      'assets/images/about/contract.svg',
+      'assets/images/about/thumb-up.svg'
     ];
     
     featureImages.forEach((img, index) => {
@@ -129,7 +129,7 @@ describe('AboutUs', () => {
       expect(feature.imgUrl).toBeDefined();
       expect(feature.title).toBeDefined();
       expect(feature.description).toBeDefined();
-      expect(feature.imgUrl).toContain('/assets/images/about/');
+      expect(feature.imgUrl).toContain('assets/images/about/');
       expect(feature.title.length).toBeGreaterThan(0);
       expect(feature.description.length).toBeGreaterThan(0);
     });

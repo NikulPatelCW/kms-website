@@ -8,7 +8,7 @@ import { CommonImgAndContent } from "../../../shared/components/common-img-and-c
   styleUrl: './family-wealth.scss',
 })
 export class FamilyWealth {
-  headerBg = '/assets/images/expertise/wealth.png';
+  headerBg = 'assets/images/expertise/wealth.png';
   headerTitle = 'Family Wealth';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class FamilyWealth {
       'Our goal is to align family values with financial decisions, ensuring continuity, transparency, and harmony within family businesses or investment entities. We bring clarity to complex inter-generational wealth transitions and help craft resilient frameworks that sustain purpose-driven capital. Our personalized, confidential approach is rooted in trust and built around your familys unique needs and legacy goals. We deliver integrated solutions that balance tradition with modern asset strategies.',
     ],
     note: 'Family Governance | Family Enterprise Solutions | Family Trusts | Liability /Obligation Management | Wealth Optimisation',
-    image: '/assets/images/expertise/wealth-img.png',
+    image: 'assets/images/expertise/wealth-img.png',
     contentBgImage: false,
     reverse: false,
   };
