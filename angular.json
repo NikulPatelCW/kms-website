@@ -73,7 +73,7 @@
               "allowedCommonJsDependencies": [
                 "aos"
               ],
-              "outputPath": "docs/browser",
+              "outputPath": "dist/kms-website/browser",
               "baseHref": "/kms-website/",
               "outputMode": "static",
               "server": false,
