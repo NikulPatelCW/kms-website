@@ -76,6 +76,7 @@ jobs:
 
       - name: Create redirect index.html
         run: |
+          ls -la dist/
           echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/home"></head><body><p>Redirecting to <a href="/home">home page</a>...</p></body></html>' > dist/kms-advisors/browser/index.html
 
       - name: Setup Pages
