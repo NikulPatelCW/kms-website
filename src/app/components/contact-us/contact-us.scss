@@ -1,0 +1,49 @@
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-weight: 700;
+  color: var(--primary-color);
+
+  span {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+}
+
+.form-box {
+  background: var(--form-bg);
+}
+
+mat-form-field {
+  background: transparent;
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    border-radius: 0;
+  }
+}
+
+
+.contact-us-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 100%;
+  padding-block: 20px;
+  border: none;
+  outline: none;
+  color: var(--theme-white);
+  font-size: var(--fs-sub-title);
+  mat-icon {
+    height: 22px;
+  }
+  &:hover{
+    opacity: 0.9;
+  }
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: transparent !important;
+}

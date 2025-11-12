@@ -1,0 +1,503 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1638" height="774"
+  viewBox="0 0 1638 774">
+  <style>
+    @import url('https://use.typekit.net/bup2gbj.css');
+    *{
+      font-family: 'multi-display', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      /* text-transform: uppercase; */
+      color: #fff;
+    }
+    /* Dashed line flow animation */
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -40;
+      }
+    }
+
+    /* Pulse animation for circles */
+    @keyframes pulse {
+      0%, 100% {
+        r: 8;
+        fill-opacity: 1;
+      }
+      50% {
+        r: 12;
+        fill-opacity: 0.7;
+      }
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Scale animation for cards */
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Central circles first */
+    #Ellipse_115, #Ellipse_117 {
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    /* Dash lines after center */
+    line,
+    path[id*="Path_93839"],
+    path[id*="Path_93840"],
+    path[id*="Path_93841"],
+    path[id*="Path_93842"] {
+      stroke: #595b77;
+      stroke-width: 1.5px;
+      stroke-linecap: round;
+      stroke-dasharray: 8 4;
+      animation: dash 3s linear infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* Cards after dash lines */
+    rect {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    #Rectangle_8716,#Rectangle_8717-2,#Rectangle_8717 { animation-delay: 2s; }
+    #Rectangle_8716-2,#Rectangle_8716-6,#Rectangle_8718 { animation-delay: 2.3s; }
+    #Rectangle_8716-3,#Rectangle_8717-3,#Rectangle_8719 { animation-delay: 2.6s; }
+    #Rectangle_8716-4,#Rectangle_8717-4,#Rectangle_8716-5 { animation-delay: 2.9s; }
+
+    /* Text after cards */
+    text {
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    #number_one,#number_one-6,#number_one-10 { animation-delay: 2.2s; }
+    #number_one-2,#number_one-7,#number_one-11 { animation-delay: 2.5s; }
+    #number_one-3,#number_one-8,#number_one-12 { animation-delay: 2.8s; }
+    #number_one-4,#number_one-9,#number_one-13 { animation-delay: 3.1s; }
+
+    /* Pulse circles after everything */
+    circle[id*="Ellipse_119"] {
+      animation: pulse 2s ease-in-out infinite;
+      animation-delay: 3.5s;
+      transform-origin: center;
+    }
+  </style>
+
+
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.887" x2="0.5" y2="0.113" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1f5b99" />
+      <stop offset="1" stop-color="#76c3e4" />
+    </linearGradient>
+  </defs>
+  <g id="Group_173089" data-name="Group 173089" transform="translate(-141 -1403)">
+    <path id="Path_93841" data-name="Path 93841" d="M0,0H141.058" transform="translate(1118.67 1492.942) rotate(90)"
+      fill="none" stroke="#595b77" stroke-width="1" />
+    <line id="Line_524" data-name="Line 524" y2="138.5" transform="translate(1118.67 1634) rotate(90)" fill="none"
+      stroke="#595b77" stroke-width="1" />
+    <path id="Path_93840" data-name="Path 93840" d="M0,0H141.058" transform="translate(801 1492.942) rotate(90)"
+      fill="none" stroke="#595b77" stroke-width="1" />
+    <line id="Line_524-2" data-name="Line 524" y1="147.5" transform="translate(948.5 1634) rotate(90)" fill="none"
+      stroke="#595b77" stroke-width="1" />
+    <g id="Group_173029" data-name="Group 173029" transform="translate(703.506 1380) rotate(90)">
+      <line id="Line_524-3" data-name="Line 524" y1="959.006" transform="translate(254 -736)" fill="none"
+        stroke="#595b77" stroke-width="1" />
+    </g>
+    <path id="Path_93842" data-name="Path 93842" d="M0,0H141.058" transform="translate(1439 1492.942) rotate(90)"
+      fill="none" stroke="#595b77" stroke-width="1" />
+    <path id="Path_93839" data-name="Path 93839" d="M0,0H141.058" transform="translate(481 1492.942) rotate(90)"
+      fill="none" stroke="#595b77" stroke-width="1" />
+    <g id="Group_173068" data-name="Group 173068" transform="translate(19500 866)">
+      <g id="Group_173005" data-name="Group 173005" transform="translate(-2402 -750)">
+        <rect id="Rectangle_8716" data-name="Rectangle 8716" width="300" height="92" transform="translate(-16767 1287)"
+          fill="#76c3e4" />
+        <text id="number_one" data-name="number one" transform="translate(-16617 1341)" fill="#fff" font-size="24"
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-33.228" y="0">Vision</tspan>
+        </text>
+      </g>
+      <g id="Group_173067" data-name="Group 173067" transform="translate(-1287 -641)">
+        <g id="Ellipse_118" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff" stroke="#76c3e4"
+          stroke-width="1">
+          <circle cx="13" cy="13" r="13" stroke="none" />
+          <circle cx="13" cy="13" r="12.5" fill="none" />
+        </g>
+        <circle id="Ellipse_119" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+          fill="#76c3e4" />
+      </g>
+    </g>
+    <g id="Group_173069" data-name="Group 173069" transform="translate(19820 866)">
+      <g id="Group_173005-2" data-name="Group 173005" transform="translate(-2402 -750)">
+        <rect id="Rectangle_8716-2" data-name="Rectangle 8716" width="300" height="90"
+          transform="translate(-16767 1289)" fill="#76c3e4" />
+        <text id="number_one-2" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-46.02" y="0">Strategy</tspan>
+        </text>
+      </g>
+      <g id="Group_173067-2" data-name="Group 173067" transform="translate(-1287 -641)">
+        <g id="Ellipse_118-2" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff" stroke="#76c3e4"
+          stroke-width="1">
+          <circle cx="13" cy="13" r="13" stroke="none" />
+          <circle cx="13" cy="13" r="12.5" fill="none" />
+        </g>
+        <circle id="Ellipse_119-2" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+          fill="#76c3e4" />
+      </g>
+    </g>
+    <g id="Group_173070" data-name="Group 173070" transform="translate(20138 866)">
+      <g id="Group_173005-3" data-name="Group 173005" transform="translate(-2402 -750)">
+        <rect id="Rectangle_8716-3" data-name="Rectangle 8716" width="300" height="90"
+          transform="translate(-16767 1289)" fill="#76c3e4" />
+        <text id="number_one-3" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-60.012" y="0">Positioning</tspan>
+        </text>
+      </g>
+      <g id="Group_173067-3" data-name="Group 173067" transform="translate(-1287 -641)">
+        <g id="Ellipse_118-3" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff" stroke="#76c3e4"
+          stroke-width="1">
+          <circle cx="13" cy="13" r="13" stroke="none" />
+          <circle cx="13" cy="13" r="12.5" fill="none" />
+        </g>
+        <circle id="Ellipse_119-3" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+          fill="#76c3e4" />
+      </g>
+    </g>
+    <g id="Group_173071" data-name="Group 173071" transform="translate(20458 866)">
+      <g id="Group_173005-4" data-name="Group 173005" transform="translate(-2402 -750)">
+        <rect id="Rectangle_8716-4" data-name="Rectangle 8716" width="300" height="90"
+          transform="translate(-16767 1289)" fill="#76c3e4" />
+        <text id="number_one-4" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-137.388" y="0">Control and management</tspan>
+        </text>
+      </g>
+      <g id="Group_173067-4" data-name="Group 173067" transform="translate(-1287 -641)">
+        <g id="Ellipse_118-4" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff" stroke="#76c3e4"
+          stroke-width="1">
+          <circle cx="13" cy="13" r="13" stroke="none" />
+          <circle cx="13" cy="13" r="12.5" fill="none" />
+        </g>
+        <circle id="Ellipse_119-4" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+          fill="#76c3e4" />
+      </g>
+    </g>
+    <g id="Group_173074" data-name="Group 173074" transform="translate(19593 642)">
+      <g id="Group_173063" data-name="Group 173063">
+        <g id="Group_172986" data-name="Group 172986" transform="translate(-202 -515)">
+          <circle id="Ellipse_115" data-name="Ellipse 115" cx="248" cy="248" r="248" transform="translate(-18671 1544)"
+            fill="url(#linear-gradient)" />
+          <circle id="Ellipse_117" data-name="Ellipse 117" cx="242.5" cy="242.5" r="242.5"
+            transform="translate(-18664.611 1550)" fill="#fff" />
+        </g>
+        <g id="Group_172985" data-name="Group 172985" transform="translate(-19568 774.5)">
+          <circle id="Ellipse_116" data-name="Ellipse 116" cx="125.5" cy="125.5" r="125.5"
+            transform="translate(818 381)" fill="#e2f0ff" />
+          <g id="Ellipse_114" data-name="Ellipse 114" transform="translate(818 374.5)" fill="#fff" stroke="#9fceff"
+            stroke-width="1">
+            <circle cx="125.5" cy="125.5" r="125.5" stroke="none" />
+            <circle cx="125.5" cy="125.5" r="125" fill="none" />
+          </g>
+          <text id="number_one-5" data-name="number one" transform="translate(944 487.5)" fill="#1f5b99" font-size="32"
+            font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+            <tspan x="-62.304" y="0">Business</tspan>
+            <tspan x="-62.832" y="46">Verticals</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_173058" data-name="Group 173058">
+        <line id="Line_525" data-name="Line 525" x1="194" transform="translate(-18360 1209)" fill="none"
+          stroke="#595b77" stroke-width="1" />
+        <g id="Group_173040" data-name="Group 173040" transform="translate(-18355.5 1075)">
+          <line id="Line_523" data-name="Line 523" x1="194" fill="none" stroke="#595b77" stroke-width="1" />
+          <line id="Line_524-4" data-name="Line 524" y2="138.5" transform="translate(0)" fill="none" stroke="#595b77"
+            stroke-width="1" />
+        </g>
+        <g id="Group_173038" data-name="Group 173038" transform="translate(-18364 1340)">
+          <line id="Line_523-2" data-name="Line 523" x1="194" transform="translate(0 138.5)" fill="none"
+            stroke="#595b77" stroke-width="1" />
+          <line id="Line_524-5" data-name="Line 524" y1="138.5" transform="translate(0)" fill="none" stroke="#595b77"
+            stroke-width="1" />
+        </g>
+        <g id="Group_173039" data-name="Group 173039" transform="translate(-18360 1204.5)">
+          <line id="Line_523-3" data-name="Line 523" x1="194" transform="translate(0 138.5)" fill="none"
+            stroke="#595b77" stroke-width="1" />
+          <line id="Line_524-6" data-name="Line 524" y1="138.5" transform="translate(0)" fill="none" stroke="#595b77"
+            stroke-width="1" />
+        </g>
+        <g id="Group_173057" data-name="Group 173057" transform="translate(0 -67)">
+          <g id="Group_173018" data-name="Group 173018" transform="translate(-1375 -327)">
+            <g id="Group_172995" data-name="Group 172995">
+              <rect id="Rectangle_8717" data-name="Rectangle 8717" width="345" height="114"
+                transform="translate(-16784 1413)" fill="#1f5b99" />
+              <text id="number_one-6" data-name="number one" transform="translate(-16611 1461)" fill="#fff"
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+                <tspan x="-108.624" y="0">Estate management</tspan>
+                <tspan font-family="MultiDisplay-Regular, MultiDisplay" font-weight="400">
+                  <tspan x="-110.064" y="34">(Legacy preservation)</tspan>
+                </tspan>
+              </text>
+            </g>
+            <g id="Group_173013" data-name="Group 173013" transform="translate(0 127)">
+              <g id="Ellipse_118-5" data-name="Ellipse 118" transform="translate(-16797 1330)" fill="#fff"
+                stroke="#1f5b99" stroke-width="1">
+                <circle cx="13" cy="13" r="13" stroke="none" />
+                <circle cx="13" cy="13" r="12.5" fill="none" />
+              </g>
+              <circle id="Ellipse_119-5" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-16792 1335)"
+                fill="#1f5b99" />
+            </g>
+          </g>
+          <g id="Group_173019" data-name="Group 173019" transform="translate(-1375 -327)">
+            <g id="Group_172997" data-name="Group 172997">
+              <rect id="Rectangle_8718" data-name="Rectangle 8718" width="345" height="114"
+                transform="translate(-16784 1547)" fill="#1f5b99" />
+              <text id="number_one-7" data-name="number one" transform="translate(-16611 1612)" fill="#fff"
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+                <tspan x="-98.34" y="0">Wealth protection</tspan>
+              </text>
+            </g>
+            <g id="Group_173014" data-name="Group 173014" transform="translate(0 261)">
+              <g id="Ellipse_118-6" data-name="Ellipse 118" transform="translate(-16797 1330)" fill="#fff"
+                stroke="#1f5b99" stroke-width="1">
+                <circle cx="13" cy="13" r="13" stroke="none" />
+                <circle cx="13" cy="13" r="12.5" fill="none" />
+              </g>
+              <circle id="Ellipse_119-6" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-16792 1335)"
+                fill="#1f5b99" />
+            </g>
+          </g>
+          <g id="Group_173020" data-name="Group 173020" transform="translate(-1375 -327)">
+            <g id="Group_172998" data-name="Group 172998">
+              <rect id="Rectangle_8719" data-name="Rectangle 8719" width="345" height="114"
+                transform="translate(-16784 1681)" fill="#1f5b99" />
+              <text id="number_one-8" data-name="number one" transform="translate(-16611 1746)" fill="#fff"
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+                <tspan x="-103.272" y="0">Realisation of value</tspan>
+              </text>
+            </g>
+            <g id="Group_173015" data-name="Group 173015" transform="translate(0 395)">
+              <g id="Ellipse_118-7" data-name="Ellipse 118" transform="translate(-16797 1330)" fill="#fff"
+                stroke="#1f5b99" stroke-width="1">
+                <circle cx="13" cy="13" r="13" stroke="none" />
+                <circle cx="13" cy="13" r="12.5" fill="none" />
+              </g>
+              <circle id="Ellipse_119-7" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-16792 1335)"
+                fill="#1f5b99" />
+            </g>
+          </g>
+          <g id="Group_173021" data-name="Group 173021" transform="translate(-1375 -327)">
+            <g id="Group_172996" data-name="Group 172996" transform="translate(0 536)">
+              <rect id="Rectangle_8716-5" data-name="Rectangle 8716" width="345" height="114"
+                transform="translate(-16784 1279)" fill="#1f5b99" />
+              <text id="number_one-9" data-name="number one" transform="translate(-16611 1344)" fill="#fff"
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+                <tspan x="-59.508" y="0">Succession</tspan>
+              </text>
+            </g>
+            <g id="Group_173016" data-name="Group 173016" transform="translate(0 529)">
+              <g id="Ellipse_118-8" data-name="Ellipse 118" transform="translate(-16797 1330)" fill="#fff"
+                stroke="#76c3e4" stroke-width="1">
+                <circle cx="13" cy="13" r="13" stroke="none" />
+                <circle cx="13" cy="13" r="12.5" fill="none" />
+              </g>
+              <circle id="Ellipse_119-8" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-16792 1335)"
+                fill="#1f5b99" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group_173059" data-name="Group 173059">
+        <g id="Group_173036" data-name="Group 173036" transform="translate(-1375 -327)">
+          <g id="Group_173028" data-name="Group 173028">
+            <line id="Line_524-7" data-name="Line 524" y2="5.5" transform="translate(-17537.5 1402.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173030" data-name="Group 173030" transform="translate(0 133.5)">
+            <line id="Line_523-4" data-name="Line 523" x2="194" transform="translate(-17731.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-8" data-name="Line 524" y2="138.5" transform="translate(-17537.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173032" data-name="Group 173032" transform="translate(0 267.5)">
+            <line id="Line_523-5" data-name="Line 523" x2="194" transform="translate(-17731.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-9" data-name="Line 524" y2="138.5" transform="translate(-17537.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173029-2" data-name="Group 173029" transform="translate(-17721.5 1800.5)">
+            <line id="Line_524-10" data-name="Line 524" y1="14" transform="translate(194 -9)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173031" data-name="Group 173031" transform="translate(-17721.5 1666.5)">
+            <line id="Line_523-6" data-name="Line 523" x2="194" transform="translate(0 138.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-11" data-name="Line 524" y1="147.5" transform="translate(194 -9)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173033" data-name="Group 173033" transform="translate(-17727.5 1532.5)">
+            <line id="Line_523-7" data-name="Line 523" x2="194" transform="translate(0 138.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-12" data-name="Line 524" y1="147.5" transform="translate(194 -9)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+        </g>
+        <g id="Group_173034" data-name="Group 173034" transform="translate(-1375 -327)">
+          <g id="Group_173030-2" data-name="Group 173030" transform="translate(0 133.5)">
+            <line id="Line_523-8" data-name="Line 523" x2="194" transform="translate(-17731.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-13" data-name="Line 524" y2="138.5" transform="translate(-17537.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173032-2" data-name="Group 173032" transform="translate(0 267.5)">
+            <line id="Line_523-9" data-name="Line 523" x2="194" transform="translate(-17731.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-14" data-name="Line 524" y2="138.5" transform="translate(-17537.5 1269.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173031-2" data-name="Group 173031" transform="translate(-17721.5 1666.5)">
+            <line id="Line_523-10" data-name="Line 523" x2="194" transform="translate(0 138.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-15" data-name="Line 524" y1="147.5" transform="translate(194 -9)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+          <g id="Group_173033-2" data-name="Group 173033" transform="translate(-17727.5 1532.5)">
+            <line id="Line_523-11" data-name="Line 523" x2="194" transform="translate(0 138.5)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+            <line id="Line_524-16" data-name="Line 524" y1="147.5" transform="translate(194 -9)" fill="none"
+              stroke="#595b77" stroke-width="1" />
+          </g>
+        </g>
+        <g id="Group_173023" data-name="Group 173023" transform="translate(-1375 -327)">
+          <g id="Group_173001" data-name="Group 173001" transform="translate(-1293 -67)">
+            <rect id="Rectangle_8717-2" data-name="Rectangle 8717" width="345" height="114"
+              transform="translate(-16784 1413)" fill="#1f5b99" />
+            <text id="number_one-10" data-name="number one" transform="translate(-16611 1478)" fill="#fff"
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+              <tspan x="-40.872" y="0">Growth</tspan>
+            </text>
+          </g>
+          <g id="Group_173007" data-name="Group 173007" transform="translate(0 134)">
+            <g id="Ellipse_118-9" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff"
+              stroke="#1f5b99" stroke-width="1">
+              <circle cx="13" cy="13" r="13" stroke="none" />
+              <circle cx="13" cy="13" r="12.5" fill="none" />
+            </g>
+            <circle id="Ellipse_119-9" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+              fill="#1f5b99" />
+          </g>
+        </g>
+        <g id="Group_173024" data-name="Group 173024" transform="translate(-1375 -327)">
+          <g id="Group_173002" data-name="Group 173002" transform="translate(-1293 201)">
+            <rect id="Rectangle_8716-6" data-name="Rectangle 8716" width="345" height="114"
+              transform="translate(-16784 1279)" fill="#1f5b99" />
+            <text id="number_one-11" data-name="number one" transform="translate(-16611 1344)" fill="#fff"
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+              <tspan x="-125.46" y="0">Improved performance</tspan>
+            </text>
+          </g>
+          <g id="Group_173008" data-name="Group 173008" transform="translate(0 268)">
+            <g id="Ellipse_118-10" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff"
+              stroke="#1f5b99" stroke-width="1">
+              <circle cx="13" cy="13" r="13" stroke="none" />
+              <circle cx="13" cy="13" r="12.5" fill="none" />
+            </g>
+            <circle id="Ellipse_119-10" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+              fill="#1f5b99" />
+          </g>
+        </g>
+        <g id="Group_173025" data-name="Group 173025" transform="translate(-1375 -327)">
+          <g id="Group_173003" data-name="Group 173003" transform="translate(-1293 201)">
+            <rect id="Rectangle_8717-3" data-name="Rectangle 8717" width="345" height="114"
+              transform="translate(-16784 1413)" fill="#1f5b99" />
+            <text id="number_one-12" data-name="number one" transform="translate(-16611 1461)" fill="#fff"
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+              <tspan x="-73.56" y="0">Sustainability</tspan>
+              <tspan font-family="MultiDisplay-Regular, MultiDisplay" font-weight="400">
+                <tspan x="-126.084" y="34">(Overcoming challenges)</tspan>
+              </tspan>
+            </text>
+          </g>
+          <g id="Group_173009" data-name="Group 173009" transform="translate(0 402)">
+            <g id="Ellipse_118-11" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff"
+              stroke="#1f5b99" stroke-width="1">
+              <circle cx="13" cy="13" r="13" stroke="none" />
+              <circle cx="13" cy="13" r="12.5" fill="none" />
+            </g>
+            <circle id="Ellipse_119-11" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+              fill="#1f5b99" />
+          </g>
+        </g>
+        <g id="Group_173026" data-name="Group 173026" transform="translate(-1375 -327)">
+          <g id="Group_173004" data-name="Group 173004" transform="translate(-1293 335)">
+            <rect id="Rectangle_8717-4" data-name="Rectangle 8717" width="345" height="114"
+              transform="translate(-16784 1413)" fill="#1f5b99" />
+            <text id="number_one-13" data-name="number one" transform="translate(-16611 1478)" fill="#fff"
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+              <tspan x="-77.028" y="0">Value creation</tspan>
+            </text>
+          </g>
+          <g id="Group_173010" data-name="Group 173010" transform="translate(0 536)">
+            <g id="Ellipse_118-12" data-name="Ellipse 118" transform="translate(-17745 1256)" fill="#fff"
+              stroke="#1f5b99" stroke-width="1">
+              <circle cx="13" cy="13" r="13" stroke="none" />
+              <circle cx="13" cy="13" r="12.5" fill="none" />
+            </g>
+            <circle id="Ellipse_119-12" data-name="Ellipse 119" cx="8" cy="8" r="8" transform="translate(-17740 1261)"
+              fill="#1f5b99" />
+          </g>
+        </g>
+      </g>
+      <g id="Group_173060" data-name="Group 173060" transform="translate(0.001)">
+        <path id="Path_93838" data-name="Path 93838"
+          d="M-20104.932,2252.071l137.617-116.745s59.35,76.308,61.307,193.053-71.09,200.228-71.09,200.228l-131.094-123.919s20.217-37.665,20.217-76.308S-20104.932,2252.071-20104.932,2252.071Z"
+          transform="translate(-20957.328 -18969.969) rotate(-90)" fill="#76c3e4" />
+        <text id="number_one-14" data-name="number one" transform="translate(-18625 1048)" fill="#fff" font-size="32"
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-75.92" y="0">Promoters</tspan>
+        </text>
+      </g>
+      <g id="Group_173062" data-name="Group 173062">
+        <path id="Path_93837" data-name="Path 93837"
+          d="M-19909.229,2252.071l-137.617-116.745s-59.35,76.308-61.307,193.053,71.09,200.228,71.09,200.228l131.094-123.919s-20.217-37.665-20.217-76.308S-19909.229,2252.071-19909.229,2252.071Z"
+          transform="translate(1134.691 -1055.325)" fill="#1f5b99" />
+        <text id="number_one-15" data-name="number one" transform="translate(-18881.389 1287.999)" fill="#fff"
+          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-62.304" y="0">Business</tspan>
+        </text>
+      </g>
+      <g id="Group_173061" data-name="Group 173061">
+        <path id="Path_93836" data-name="Path 93836"
+          d="M-20104.932,2252.071l137.617-116.745s59.35,76.308,61.307,193.053-71.09,200.228-71.09,200.228l-131.094-123.919s20.217-37.665,20.217-76.308S-20104.932,2252.071-20104.932,2252.071Z"
+          transform="translate(1613.611 -1055.325)" fill="#1f5b99" />
+        <text id="number_one-16" data-name="number one" transform="translate(-18382.389 1264.999)" fill="#fff"
+          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
+          <tspan x="-48.336" y="0">Family</tspan>
+          <tspan x="-43.36" y="46">Office</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

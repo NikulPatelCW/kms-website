@@ -1,0 +1,149 @@
+/* footer.component.scss */
+.footer-section {  
+  background: #e3f0fa;
+  color: #2c3e50;
+  
+  
+  .footer-section-top{
+    position: relative;    
+    &::before{
+      content: '';
+      position: absolute;      
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      background-image: url('/assets/images/footer-bg-img.svg');
+      width: 100%;  // desired size
+      height: 100%; // desired size
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+  &::after{
+      content: '';
+      position: absolute;      
+      top: 0px;
+      left: 0px;
+      z-index: 2;
+      opacity: 0.44;
+      background-image: url('/assets/images/footer-bg-img-gradient.svg');
+      width: 100%;  // desired size
+      height: 100%; // desired size
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .footer-logo {
+    width: 80px;
+  }
+
+  .footer-title {
+    font-size: var(--fs-custom-20);
+    font-weight: 500;
+    margin-bottom: 35px;
+    color: var(--footer-title);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 2px;
+      bottom: -12px;
+      width: 30px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 30px;
+    }
+  }
+
+  .footer-links a {
+    color: var(--footer-title);
+    font-size: var(--fs-body);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    // &:hover {
+    //   text-decoration: underline;
+    // }
+  }
+  .footer-address {
+    list-style: none;
+    color: var(--footer-title);
+    font-size: var(--fs-body);
+    li {
+      position: relative; // for absolute positioning of icon
+      padding-left: 40px; // space for icon
+      margin-bottom: 15px;
+
+      mat-icon {
+        position: absolute;
+        left: 5px;
+        top: 3px;
+        font-size: 18px;
+        color: var(--footer-title); // adjust as needed
+      }
+
+      // For li containing a div (like your first one)
+      > div:last-child {
+        display: inline-block;
+      }
+    }
+  }
+
+  mat-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  .footer-logo-div {
+    z-index: 3;
+        padding-bottom: 30px;
+    img {
+      width:150px;
+    }
+  }
+
+  .footer-content-center{
+    z-index: 3;
+  }
+
+  .footer-bottom {
+    background: var(--footer-title);
+    color: #fff;
+    font-size: var(--fs-note);
+  }
+}
+
+@media (min-width: 768px) {
+    .justify-content-md-start {
+        justify-content: flex-start !important;
+        align-items: start;
+    }
+}
+
+@media (max-width: 767.98px) {
+  .footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer-section {
+    text-align: center;
+
+    .footer-links {
+      padding-left: 0;
+    }
+    .footer-title {
+      width: fit-content;
+    }
+
+    mat-icon {
+      display: inline-block;
+    }
+  }
+}

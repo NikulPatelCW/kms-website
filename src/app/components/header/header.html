@@ -1,0 +1,103 @@
+<header class="main-header" [class.sticky]="isSticky" [class.home-header]="isHome">
+  <nav class="navbar navbar-expand-lg container-fluid">
+    <div class="container align-items-center">
+      <a class="navbar-brand" (click)="handleRouterChange()" routerLink="/">
+        <img src="assets/images/logo.svg" alt="KMS Logo" class="logo" />
+      </a>
+
+      <!-- Toggle for mobile -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item">
+            <a
+              routerLinkActive="active"
+              (click)="handleRouterChange()"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLink="/home"
+              class="nav-link"
+              >HOME</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLinkActive="active"
+              (click)="handleRouterChange()"
+              routerLink="/about"
+              class="nav-link"
+              >ABOUT US</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              routerLinkActive="active"
+              (click)="handleRouterChange()"
+              routerLink="/kms-approach"
+              class="nav-link"
+              >KMS APPROACH</a
+            >
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a
+              routerLinkActive="active"
+              (click)="handleRouterChange()"
+              routerLink="/kms-expertise/business-advisory"
+              class="nav-link d-flex"
+              >KMS EXPERTISE <mat-icon>keyboard_arrow_down</mat-icon></a
+            >
+          </li> -->
+          <li
+            class="nav-item dropdown"
+            (mouseenter)="isDropdownOpen = true"
+            (mouseleave)="isDropdownOpen = false"
+          >
+            <a
+              routerLinkActive="active"
+              class="nav-link d-flex align-items-center dropdown-toggle"
+              [class.show]="isDropdownOpen"
+            >
+              KMS EXPERTISE
+              <mat-icon>keyboard_arrow_down</mat-icon>
+            </a>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu" [class.show]="isDropdownOpen">
+              @for (item of expertiseList; track item.routerLink) {
+              <li>
+                <a class="dropdown-item" (click)="handleRouterChange()" [routerLink]="item.routerLink">
+                  <mat-icon class="arrow-icon">arrow_forward</mat-icon>
+                  <span>{{ item.label }}</span>
+                </a>
+              </li>
+              }
+            </ul>
+          </li>
+
+          <li class="nav-item"><a routerLinkActive="active" (click)="handleRouterChange()" routerLink="/industries" class="nav-link">INDUSTRIES</a></li>
+
+          <!-- Call Button -->
+          <li class="nav-item ms-lg-3">
+            <a href="tel:+91926309540" class="call-btn btn d-flex align-items-center">
+              <mat-icon svgIcon="telephone" class="me-2"></mat-icon> +91 79 26309540
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <router-outlet />
+</main>
+
+<app-footer></app-footer>
+<!-- footer.component.html -->

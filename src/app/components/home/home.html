@@ -1,0 +1,190 @@
+<section class="page-content hero-section">
+  <video
+    #heroVideo
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="hero-video"
+    poster="assets/images/hero-bg-img.png"
+  >
+    <source src="assets/video/hero-bg-video.mp4" type="video/mp4" />
+  </video>
+  <h3 class="hero-section-title" data-aos="fade-up" data-aos-duration="1000">
+    Shaping the bold to achieve the extraordinary
+  </h3>
+  <!-- <div class="hero-section-tags">
+        <p class="tag-btn">Giving innovations a purpose</p>
+        <p class="tag-btn">Rewiring growth plans</p>
+        <p class="tag-btn"> Creating the best versions of business</p>
+    </div> -->
+  <div class="hero-section-tags d-flex justify-content-center align-items-center">
+    <div class="tag-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+      Giving innovations a purpose
+    </div>
+    <div class="tag-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+      Rewiring growth plans
+    </div>
+    <div class="tag-btn" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+      Creating the best versions of businesses
+    </div>
+  </div>
+</section>
+<section
+  class="overflow-hidden container padding-bottom-section providing-section mx-auto flex-column-reverse flex-lg-row row common-section-top-spacing"
+>
+  <div class="col-12 col-lg-6 d-flex pe-md-2" data-aos="fade-left" data-aos-duration="1000">
+    <div class="providing-section-container d-flex flex-column justify-content-center">
+      <p
+        class="providing-section-title"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="200"
+      >
+        Providing the right solutions, solving problems with purpose and passion
+      </p>
+      <p
+        class="providing-section-content"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="400"
+      >
+        Knowledge Management Solutions (KMS) is an advisory and consulting organization with an
+        enriching experience of 40 years. We have been successful in integrating this legacy into a
+        wide range of exceptionally skilled offerings that have left a lasting impression on our
+        clientele.
+      </p>
+      <p
+        class="providing-section-content"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="600"
+      >
+        Our experience solves our clients' most difficult challenges by approaching problem-solving
+        from a fresh, more productive perspective. Our 40 years of existence have been made possible
+        by our wealth of business and industry experience, and during that time we have remained
+        steadfast in our dedication to giving our clients the best service possible.
+      </p>
+      @if (showMore()) {
+      <p class="providing-section-content">
+        We believe that every idea is only a theory unless it is actioned and guided with a clear
+        vision. Under the eminent leadership, KMS offers business solutions that can evolve from an
+        idea to the pinnacles of triumph and finally reach its vision. KMS assists businesses in
+        reevaluating their goals and priorities in the face of a rapidly evolving business
+        environment. We collaborate with clients to reduce the range of ambiguity and arrive at a
+        crucial decision that initiates the next stage of growth, from offering professional
+        solutions to steering businesses in the proper path.
+      </p>
+      <p class="providing-section-content">
+        To help organizations grow and succeed, we have adjusted to the demands of the times and are
+        now creating value and opportunities that offer in-depth knowledge, unbiased insights, a
+        customized strategy, and unmatched collaboration.
+      </p>
+      }
+      <div
+        class="example-button-row"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="800"
+      >
+        <button class="call-btn" (click)="showMore.set(!showMore())">
+          {{ showMore() ? 'Read Less' : 'Read More' }}
+          <mat-icon [svgIcon]="showMore() ? 'arrow-up' : 'arrow-down'" class="ms-2"></mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="col-12 col-lg-6 image-wrapper"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-delay="300"
+  >
+    <img class="main-img" src="assets/images/home-providing.png" />
+  </div>
+</section>
+<section class="home-process-section common-section-top-spacing">
+  <div class="container overflow-x-hidden">
+    <div class="common-section-title text-center" data-aos="fade-down" data-aos-duration="1000">
+      <h3>THE PROCESS</h3>
+      <p>Positioning businesses to achieve success</p>
+    </div>
+    <div class="home-process-content">
+      @for (item of processData; track $index) {
+      <div
+        class="home-process-content-card"
+        [attr.data-aos]="$index % 2 === 0 ? 'fade-left' : 'fade-right'"
+        data-aos-duration="800"
+        [attr.data-aos-delay]="$index * 200"
+      >
+        <h4>{{ item?.title }}</h4>
+        <div class="separator"></div>
+        <ul>
+          @for (subItem of item?.details; track $index) {
+          <li>{{ subItem }}</li>
+          }
+        </ul>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+<section class="home-know-kms-section overflow-hidden">
+  <div class="">
+    <div class="common-section-title" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-center">KNOW KMS</h3>
+    </div>
+    <div
+      class="kms-scroll-container"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-delay="300"
+    >
+      @if (showLeftArrow) {<button
+        mat-icon-button
+        class="kms-scroll-btn left"
+        (click)="scroll('left')"
+      >
+        <mat-icon>arrow_back</mat-icon></button
+      >}
+
+      <div class="home-know-kms-content" #scrollContainer (scroll)="onScroll()">
+        @for (item of knowKMSData; track $index) {
+        <div
+          class="home-know-kms-content-card"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          [attr.data-aos-delay]="$index * 200"
+        >
+          <h4
+            data-aos="fade-right"
+            data-aos-duration="600"
+            [attr.data-aos-delay]="$index * 200 + 300"
+          >
+            {{ item.title }}
+          </h4>
+          <ul>
+            @for (subItem of item?.details; track $index) {
+            <li
+              data-aos="fade-left"
+              data-aos-duration="500"
+              [attr.data-aos-delay]="$index * 100 + 500"
+            >
+              {{ subItem }}
+            </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+      @if (showRightArrow) {<button
+        mat-icon-button
+        class="kms-scroll-btn right"
+        (click)="scroll('right')"
+      >
+        <mat-icon>arrow_forward</mat-icon></button
+      >}
+    </div>
+  </div>
+</section>

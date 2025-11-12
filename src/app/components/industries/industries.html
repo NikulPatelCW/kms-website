@@ -1,0 +1,21 @@
+<section class="common-hero-section container" [ngStyle]="headerImgStyle">
+  <div class="separator"></div>
+  <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
+    <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Sectors & Industries</h3>
+    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - Industries</p>
+  </div>
+</section>
+
+<section class="industries-section container horizontal-spacing">
+  <div class="industries-content">
+        @for (item of knowKMSData; track $index) {
+        <div class="industries-content-card" data-aos="fade-up" data-aos-duration="800" [attr.data-aos-delay]="$index * 200">
+          <ul>
+            @for (subItem of item?.details; track $index) {
+            <li data-aos="fade-left" data-aos-duration="800" [attr.data-aos-delay]="($index * 100) + 300">{{ subItem }}</li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+</section>

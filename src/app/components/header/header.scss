@@ -1,0 +1,50 @@
+/* footer.component.scss */
+.footer-section {
+  background: #e3f0fa;
+  color: #2c3e50;
+
+  .footer-logo {
+    width: 80px;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1068b2;
+  }
+
+  .footer-links a {
+    color: #1068b2;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  mat-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    background: #1068b2;
+    color: #fff;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-section {
+    text-align: center;
+
+    .footer-links {
+      padding-left: 0;
+    }
+
+    mat-icon {
+      display: inline-block;
+    }
+  }
+}
