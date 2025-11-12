@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StructuringAndRestructuring } from './structuring-and-restructuring';
@@ -8,7 +9,8 @@ describe('StructuringAndRestructuring', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StructuringAndRestructuring]
+      imports: [StructuringAndRestructuring],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

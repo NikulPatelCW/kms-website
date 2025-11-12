@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InorganicGrowthStrategies } from './inorganic-growth-strategies';
@@ -8,7 +9,8 @@ describe('InorganicGrowthStrategies', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InorganicGrowthStrategies]
+      imports: [InorganicGrowthStrategies],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

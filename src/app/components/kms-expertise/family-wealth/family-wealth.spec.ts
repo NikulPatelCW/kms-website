@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FamilyWealth } from './family-wealth';
@@ -8,7 +9,8 @@ describe('FamilyWealth', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FamilyWealth]
+      imports: [FamilyWealth],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

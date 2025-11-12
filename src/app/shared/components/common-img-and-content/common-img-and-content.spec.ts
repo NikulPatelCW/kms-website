@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommonImgAndContent } from './common-img-and-content';
@@ -8,7 +9,8 @@ describe('CommonImgAndContent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonImgAndContent]
+      imports: [CommonImgAndContent],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

@@ -90,31 +90,43 @@ npm test
 npm run e2e
 ```
 
-## 🚢 GitLab Deployment
+## 🚢 GitHub Deployment
 
-### Setup GitLab CI/CD
+### 📍 Repository Information
 
-1. **Push to GitLab:**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
+**Git Repository:** `https://github.com/NikulPatelCW/kms-website.git`
 
-2. **GitLab Pages (Automatic):**
-   - Pipeline will auto-deploy to: `https://[username].gitlab.io/kms-website`
+**Website URL (after deployment):** `https://nikulpatelcw.github.io/kms-website/`
 
-3. **Manual Deployment:**
-   - Go to GitLab → CI/CD → Pipelines
-   - Click "Run Pipeline" for manual deployment
+### Setup GitHub Pages & CI/CD
 
-### GitLab Configuration
+1. **Enable GitHub Pages:**
+   - Go to repository **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save settings
 
-The `.gitlab-ci.yml` file includes:
-- ✅ Automated builds on push
-- ✅ GitLab Pages deployment
-- ✅ Manual production deployment
-- ✅ Artifact caching for faster builds
+2. **Automatic Deployment:**
+   - Push to `main` or `master` branch:
+     ```bash
+     git add .
+     git commit -m "Your commit message"
+     git push origin main
+     ```
+   - GitHub Actions will automatically build and deploy
+
+3. **Monitor Deployment:**
+   - Go to **Actions** tab to see workflow progress
+   - Wait for deployment to complete (usually 2-5 minutes)
+
+### GitHub Actions Workflow
+
+The `.github/workflows/build-and-deploy.yml` includes:
+- ✅ Automated builds on push to main/master
+- ✅ GitHub Pages deployment
+- ✅ Build artifact uploads
+- ✅ Manual workflow triggers
+
+**See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed deployment steps.**
 
 ## 🐳 Docker Deployment
 
@@ -140,7 +152,7 @@ kms-website/
 │   │   └── core/          # Core services
 │   ├── assets/            # Static assets
 │   └── styles.scss        # Global styles
-├── .gitlab-ci.yml         # CI/CD pipeline
+├── .github/workflows/     # GitHub Actions workflows
 ├── Dockerfile            # Docker configuration
 ├── nginx.conf           # Production server config
 └── package.json         # Dependencies & scripts
@@ -160,7 +172,8 @@ kms-website/
 - **Development:** http://localhost:4200
 - **Production Build:** http://localhost:8080  
 - **Docker:** http://localhost
-- **GitLab Pages:** https://[username].gitlab.io/kms-website
+- **GitHub Repository:** https://github.com/NikulPatelCW/kms-website
+- **GitHub Pages:** https://nikulpatelcw.github.io/kms-website/ (after deployment)
 
 ## 📞 Support
 
@@ -179,7 +192,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://rsource.instantmseloans.in/nikul.patel/kms-website.git
+git remote add origin https://github.com/NikulPatelCW/kms-website.git
 git branch -M main
 git push -uf origin main
 ```

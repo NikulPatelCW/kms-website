@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { KmsApproach } from './kms-approach';
@@ -8,7 +9,8 @@ describe('KmsApproach', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [KmsApproach]
+      imports: [KmsApproach],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

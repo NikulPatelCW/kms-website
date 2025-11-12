@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ValueMaximizationAndMonetization } from './value-maximization-and-monetization';
@@ -8,7 +9,8 @@ describe('ValueMaximizationAndMonetization', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ValueMaximizationAndMonetization]
+      imports: [ValueMaximizationAndMonetization],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 

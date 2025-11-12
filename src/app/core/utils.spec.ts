@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { CommonUtils } from './commonUtils';
@@ -6,7 +7,9 @@ describe('CommonUtils', () => {
   let service: CommonUtils;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [provideZonelessChangeDetection()]
+    });
     service = TestBed.inject(CommonUtils);
   });
 

@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaxEfficiencies } from './tax-efficiencies';
@@ -8,7 +9,8 @@ describe('TaxEfficiencies', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaxEfficiencies]
+      imports: [TaxEfficiencies],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
