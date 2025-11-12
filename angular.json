@@ -53,7 +53,7 @@
               "allowedCommonJsDependencies": [
                 "aos"
               ],
-              "outputPath": "docs"
+              "outputPath": "dist/kms-website"
             },
             "development": {
               "optimization": false,

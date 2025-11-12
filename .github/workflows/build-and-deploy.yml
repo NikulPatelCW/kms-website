@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: docs
+          path: dist/kms-website
           retention-days: 7
 
   deploy-github-pages:
@@ -76,7 +76,7 @@ jobs:
 
       - name: Create redirect index.html
         run: |
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/kms-website/home"></head><body><p>Redirecting to <a href="/kms-website/home">home page</a>...</p></body></html>' > docs/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/kms-website/home"></head><body><p>Redirecting to <a href="/kms-website/home">home page</a>...</p></body></html>' > dist/kms-website/browser/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -86,7 +86,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: dist/kms-website
 
       - name: Deploy to GitHub Pages
         id: deployment
