@@ -96,9 +96,9 @@ jobs:
           INDEX_FILE=$(find docs/browser -name "index.html" -type f | head -1)
           if [ -n "$INDEX_FILE" ]; then
             echo "Found index.html at: $INDEX_FILE"
-            cp "$INDEX_FILE" docs/browser/404.html
+            cp "$INDEX_FILE" /404.html
             echo "✓ 404.html created successfully"
-            ls -lh docs/404.html
+            ls -lh /404.html
           else
             echo "✗ Error: index.html not found in docs/browser/"
             echo "Searching for HTML files:"
