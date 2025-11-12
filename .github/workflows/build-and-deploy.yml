@@ -98,7 +98,7 @@ jobs:
             echo "Found index.html at: $INDEX_FILE"
             cp "$INDEX_FILE" docs/browser/404.html
             echo "✓ 404.html created successfully"
-            ls -lh docs/browser/404.html
+            ls -lh docs/404.html
           else
             echo "✗ Error: index.html not found in docs/browser/"
             echo "Searching for HTML files:"
