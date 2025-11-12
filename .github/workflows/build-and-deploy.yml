@@ -92,13 +92,14 @@ jobs:
 
       - name: Create 404.html for GitHub Pages routing
         run: |
-          # Find index.html and copy to 404.html
+          # Find index.html and copy to 404.html at the root of docs/browser
           INDEX_FILE=$(find docs/browser -name "index.html" -type f | head -1)
           if [ -n "$INDEX_FILE" ]; then
             echo "Found index.html at: $INDEX_FILE"
-            cp "$INDEX_FILE" /404.html
-            echo "✓ 404.html created successfully"
-            ls -lh /404.html
+            # Copy to docs/browser/404.html (root of what GitHub Pages serves)
+            cp "$INDEX_FILE" docs/browser/404.html
+            echo "✓ 404.html created successfully at: docs/browser/404.html"
+            ls -lh docs/browser/404.html
           else
             echo "✗ Error: index.html not found in docs/browser/"
             echo "Searching for HTML files:"
