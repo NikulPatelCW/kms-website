@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kms-advisors": {
+    "kms-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kms-advisors:build:production"
+              "buildTarget": "kms-website:build:production"
             },
             "development": {
-              "buildTarget": "kms-advisors:build:development"
+              "buildTarget": "kms-website:build:development"
             }
           },
           "defaultConfiguration": "development"
