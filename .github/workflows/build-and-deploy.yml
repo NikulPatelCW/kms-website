@@ -74,10 +74,6 @@ jobs:
       - name: Build for production
         run: npm run build:github
 
-      - name: Create redirect index.html
-        run: |
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/kms-website/home"></head><body><p>Redirecting to <a href="/kms-website/home">home page</a>...</p></body></html>' > docs/browser/index.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:

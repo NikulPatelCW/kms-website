@@ -33,7 +33,8 @@
             "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
-            }
+            },
+            "prerender": false
           },
           "configurations": {
             "production": {
@@ -54,6 +55,28 @@
                 "aos"
               ],
               "outputPath": "dist/kms-website"
+            },
+            "github": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2MB",
+                  "maximumError": "3MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kB",
+                  "maximumError": "10kB"
+                }
+              ],
+              "outputHashing": "all",
+              "allowedCommonJsDependencies": [
+                "aos"
+              ],
+              "outputPath": "docs/browser",
+              "baseHref": "/kms-website/",
+              "outputMode": "browser",
+              "server": false
             },
             "development": {
               "optimization": false,
