@@ -7,7 +7,7 @@
     "start:host": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build --output-path docs --base-href /",
     "build:prod": "ng build --configuration production",
-    "build:github": "ng build --configuration production",
+    "build:github": "ng build --configuration production --output-path docs/browser --base-href /kms-website/ --output-mode=static",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:kms-website": "node dist/kms-website/server/server.mjs",
