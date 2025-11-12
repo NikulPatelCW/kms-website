@@ -72,7 +72,7 @@ jobs:
         run: npm ci
 
       - name: Build for production
-        run: npx ng build --configuration production --base-href /kms-website/ --output-mode=static --prerender=false
+        run: npx ng build --base-href --output-mode=static --prerender=false
 
       - name: Create redirect index.html
         run: |
