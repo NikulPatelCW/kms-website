@@ -72,7 +72,11 @@ jobs:
         run: npm ci
 
       - name: Build for production
-        run: npx ng build --configuration production --base-href /kms-website/ --output-mode=static
+        run: npx ng build --configuration production --base-href /kms-website/ --output-mode=static --prerender=false
+
+      - name: Create redirect index.html
+        run: |
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/kms-website/home"></head><body><p>Redirecting to <a href="/kms-website/home">home page</a>...</p></body></html>' > dist/kms-advisors/browser/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
