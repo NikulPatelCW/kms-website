@@ -50,6 +50,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      administration: write
 
     steps:
       - name: Checkout code
