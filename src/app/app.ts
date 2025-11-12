@@ -2,7 +2,6 @@ import { Component, signal, PLATFORM_ID, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedImports } from './shared/shared-imports';
 import { isPlatformBrowser } from '@angular/common';
-import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +16,9 @@ export class App {
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init();
+      import('aos').then(({ default: AOS }) => {
+        AOS.init();
+      });
     }
   }
 }
