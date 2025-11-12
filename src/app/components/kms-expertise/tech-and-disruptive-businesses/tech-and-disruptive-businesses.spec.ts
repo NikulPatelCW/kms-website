@@ -22,4 +22,26 @@ describe('TechAndDisruptiveBusinesses', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize header properties', () => {
+    expect(component.headerBg).toBe('/assets/images/expertise/tech.png');
+    expect(component.headerTitle).toBe('Tech & Disruptive Businesses');
+    expect(component.headerSubTitle).toBe('Home - KMS Expertise');
+  });
+
+  it('should have sections with correct structure', () => {
+    expect(component.sections).toBeDefined();
+    expect(component.sections.paragraphs.length).toBe(2);
+    expect(component.sections.image).toBe('/assets/images/expertise/tech-img.png');
+    expect(component.sections.reverse).toBe(false);
+  });
+
+  it('should have correct note content', () => {
+    expect(component.sections.note).toBe('Tech Adoption/Integration | Artificial Intelligence | IT Risk Advisory | Technology Advisory | Digitization and e-Business');
+  });
+
+  it('should have tech and disruptive business content in paragraphs', () => {
+    expect(component.sections.paragraphs[0]).toContain('technology-driven and disruptive businesses');
+    expect(component.sections.paragraphs[1]).toContain('digital and disruptive business dimensions');
+  });
 });

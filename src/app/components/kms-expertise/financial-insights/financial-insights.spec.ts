@@ -22,4 +22,28 @@ describe('FinancialInsights', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should initialize header properties', () => {
+    expect(component.headerBg).toBe('/assets/images/expertise/financial.png');
+    expect(component.headerTitle).toBe('Financial Insights');
+    expect(component.headerSubTitle).toBe('Home - KMS Expertise');
+  });
+
+  it('should have sections with correct structure', () => {
+    expect(component.sections).toBeDefined();
+    expect(component.sections.title).toBe('');
+    expect(component.sections.paragraphs.length).toBe(2);
+    expect(component.sections.image).toBe('/assets/images/expertise/financial-img.png');
+    expect(component.sections.contentBgImage).toBe(false);
+    expect(component.sections.reverse).toBe(true);
+  });
+
+  it('should have correct note content', () => {
+    expect(component.sections.note).toBe('Return Optimisation | Capital Structures | Due Diligence | Corp Finance Functions');
+  });
+
+  it('should have financial insights content in paragraphs', () => {
+    expect(component.sections.paragraphs[0]).toContain('financial insights');
+    expect(component.sections.paragraphs[1]).toContain('financial intelligence');
+  });
 });

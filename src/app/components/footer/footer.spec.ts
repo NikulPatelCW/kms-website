@@ -22,4 +22,14 @@ describe('Footer', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call commonUtils.scrollToTop on handleRouterChange', () => {
+    spyOn(component['commonUtils'], 'scrollToTop');
+    component.handleRouterChange();
+    expect(component['commonUtils'].scrollToTop).toHaveBeenCalled();
+  });
+
+  it('should inject CommonUtils service', () => {
+    expect(component['commonUtils']).toBeDefined();
+  });
 });
