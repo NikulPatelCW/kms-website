@@ -53,9 +53,7 @@
               "allowedCommonJsDependencies": [
                 "aos"
               ],
-              "outputPath": "dist/browser",
-              "baseHref": "/kms-website/",
-              "deployUrl": "/kms-website/"
+              "outputPath": "dist/browser"
             },
             "development": {
               "optimization": false,
