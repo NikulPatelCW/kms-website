@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { SharedImports } from '../../shared/shared-imports';
 import { TimelineModule } from 'primeng/timeline';
 
@@ -11,8 +11,20 @@ import { TimelineModule } from 'primeng/timeline';
 export class AboutUs {
   headerBgPath = 'assets/images/about-us-hero-bg.png';
   headerImgStyle: any = { 'background-image': `url(${this.headerBgPath})` };
+  isMobile = false;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkMobile();
+  }
+
   ngOnInit() {
     this.headerImgStyle = { 'background-image': `url(${this.headerBgPath})` };
+    this.checkMobile();
+  }
+
+  checkMobile() {
+    this.isMobile = window.innerWidth <= 991;
   }
 
   kmsFeature = [

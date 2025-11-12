@@ -34,11 +34,18 @@
   </div>
 </section>
 
-<section class=" evolution-section">
+
+<section class=" evolution-section common-max-width mx-auto">
   <h3 class="evolution-section-title" data-aos="fade-down" data-aos-duration="1000">Evolution In 40 Years</h3>
+
   <div class="custom-scroll timeline-wrapper">
     <div class="timeline-wrapper-before"></div>
-    <p-timeline [value]="processData" layout="horizontal" align="alternate" class="custom-timeline">
+    <p-timeline
+      [value]="processData"
+      [layout]="isMobile ? 'vertical' : 'horizontal'"
+      [align]="isMobile ? 'left' : 'alternate'"
+      class="custom-timeline"
+    >
       <ng-template let-item pTemplate="content">
         <div class="about-us-timeline-content-card">
           @if(item?.title){

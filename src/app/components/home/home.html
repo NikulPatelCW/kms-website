@@ -48,7 +48,7 @@
         class="providing-section-content"
         data-aos="fade-up"
         data-aos-duration="800"
-        data-aos-delay="400"
+        data-aos-delay="300"
       >
         Knowledge Management Solutions (KMS) is an advisory and consulting organization with an
         enriching experience of 40 years. We have been successful in integrating this legacy into a
@@ -59,7 +59,7 @@
         class="providing-section-content"
         data-aos="fade-up"
         data-aos-duration="800"
-        data-aos-delay="600"
+        data-aos-delay="300"
       >
         Our experience solves our clients' most difficult challenges by approaching problem-solving
         from a fresh, more productive perspective. Our 40 years of existence have been made possible
@@ -67,7 +67,9 @@
         steadfast in our dedication to giving our clients the best service possible.
       </p>
       @if (showMore()) {
-      <p class="providing-section-content">
+      <p class="providing-section-content" data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="300">
         We believe that every idea is only a theory unless it is actioned and guided with a clear
         vision. Under the eminent leadership, KMS offers business solutions that can evolve from an
         idea to the pinnacles of triumph and finally reach its vision. KMS assists businesses in
@@ -76,7 +78,9 @@
         crucial decision that initiates the next stage of growth, from offering professional
         solutions to steering businesses in the proper path.
       </p>
-      <p class="providing-section-content">
+      <p class="providing-section-content" data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="600">
         To help organizations grow and succeed, we have adjusted to the demands of the times and are
         now creating value and opportunities that offer in-depth knowledge, unbiased insights, a
         customized strategy, and unmatched collaboration.
@@ -86,7 +90,7 @@
         class="example-button-row"
         data-aos="fade-up"
         data-aos-duration="800"
-        data-aos-delay="800"
+        data-aos-delay="400"
       >
         <button class="call-btn" (click)="showMore.set(!showMore())">
           {{ showMore() ? 'Read Less' : 'Read More' }}
@@ -97,7 +101,7 @@
   </div>
   <div
     class="col-12 col-lg-6 image-wrapper"
-    data-aos="fade-right"
+    data-aos="fade-left"
     data-aos-duration="1000"
     data-aos-delay="300"
   >

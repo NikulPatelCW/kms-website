@@ -17,6 +17,7 @@ export class Header {
   isDropdownOpen = false;
   isHome = false;
   isSticky = false;
+  isMobileDropdownOpen = false; // Add this line
   @HostListener('window:scroll')
   onScroll() {
     this.isSticky = window.scrollY > 40;
@@ -44,6 +45,16 @@ export class Header {
   ];
 
   handleRouterChange(){
-    this.commonUtils.scrollToTop()
+    this.commonUtils.scrollToTop();
+    this.isMobileDropdownOpen = false; // Close mobile dropdown on navigation
+  }
+
+  toggleMobileDropdown() {
+    this.isMobileDropdownOpen = !this.isMobileDropdownOpen;
+  }
+
+  handleMobileExpertiseClick(routerLink: string) {
+    this.handleRouterChange();
+    this.isMobileDropdownOpen = false;
   }
 }

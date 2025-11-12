@@ -2,10 +2,11 @@ import { Component, signal, PLATFORM_ID, Inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedImports } from './shared/shared-imports';
 import { isPlatformBrowser } from '@angular/common';
+import { LazyLoadImageDirective } from './core/lazy-load-image.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,SharedImports],
+  imports: [RouterOutlet, SharedImports, LazyLoadImageDirective],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

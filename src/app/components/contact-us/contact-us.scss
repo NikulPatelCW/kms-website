@@ -23,6 +23,52 @@ mat-form-field {
   ::ng-deep .mat-mdc-text-field-wrapper {
     border-radius: 0;
   }
+
+  // ::ng-deep .mat-mdc-form-field-label {
+  //   color: var(--primary-color) !important;
+  // }
+
+  // ::ng-deep .mat-mdc-floating-label {
+  //   color: var(--primary-color) !important;
+  // }
+
+  ::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+  }
+
+  ::ng-deep .mdc-line-ripple::before {
+    border-bottom-color: #BACBDC !important;
+  }
+
+  ::ng-deep .mdc-line-ripple::after {
+    border-bottom-color: #BACBDC !important;
+  }
+
+  ::ng-deep .mdc-text-field--filled .mdc-line-ripple {
+    border-bottom-color: #BACBDC !important;
+  }
+
+  ::ng-deep .mdc-notched-outline__leading,
+  ::ng-deep .mdc-notched-outline__notch,
+  ::ng-deep .mdc-notched-outline__trailing {
+    border-color: #BACBDC !important;
+  }
+
+  // ::ng-deep .mat-mdc-form-field-focus-overlay {
+  //   background-color: transparent !important;
+  // }
+
+  ::ng-deep input::placeholder,
+  ::ng-deep textarea::placeholder {
+    color: #BACBDC !important;
+    // opacity: 1;
+  }
+
+  ::ng-deep .mat-mdc-input-element::placeholder {
+    color: #BACBDC !important;
+    // opacity: 1;
+  }
 }
 
 
