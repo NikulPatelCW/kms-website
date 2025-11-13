@@ -8,7 +8,7 @@ import { CommonImgAndContent } from '../../../shared/components/common-img-and-c
   styleUrl: './financial-insights.scss',
 })
 export class FinancialInsights {
-  headerBg = 'assets/images/expertise/financial.png';
+  headerBg = 'assets/images/expertise/financial.jpg';
   headerTitle = 'Financial Insights';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class FinancialInsights {
       'We also help promoters and family offices assess investment opportunities, evaluate ROI, and plan liquidity events, bridging efficiency gaps in the process. In times of transition, such as M&A, succession, or exit, we ensure that financial posture supports strategic decisions. Our insights are grounded in realism and driven by data, enabling agility in volatile environments. Through the alignment of financial processes with your mission and vision, KMS helps you build long-term value and turn financial intelligence into a competitive advantage.',
     ],
     note: 'Return Optimisation | Capital Structures | Due Diligence | Corp Finance Functions',
-    image: 'assets/images/expertise/financial-img.png',
+    image: 'assets/images/expertise/financial-img.jpg',
     contentBgImage: false,
     reverse: true,
   };

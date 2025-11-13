@@ -24,13 +24,13 @@ describe('KmsApproach', () => {
   });
 
   it('should initialize header background image', () => {
-    expect(component.headerBgPath).toBe('assets/images/about-us-hero-bg.png');
-    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(assets/images/about-us-hero-bg.png)' });
+    expect(component.headerBgPath).toBe('assets/images/about-us-hero-bg.jpg');
+    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(assets/images/about-us-hero-bg.jpg)' });
   });
 
   it('should update header style on ngOnInit', () => {
-    component.headerBgPath = '/new/path/image.png';
+    component.headerBgPath = '/new/path/image.jpg';
     component.ngOnInit();
-    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(/new/path/image.png)' });
+    expect(component.headerImgStyle).toEqual({ 'background-image': 'url(/new/path/image.jpg)' });
   });
 });

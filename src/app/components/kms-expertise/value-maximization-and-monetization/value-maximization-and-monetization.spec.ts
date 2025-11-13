@@ -24,7 +24,7 @@ describe('ValueMaximizationAndMonetization', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('assets/images/expertise/wealth.png');
+    expect(component.headerBg).toBe('assets/images/expertise/wealth.jpg');
     expect(component.headerTitle).toBe('Value Maximization And Monetization');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -32,7 +32,7 @@ describe('ValueMaximizationAndMonetization', () => {
   it('should have sections with correct structure', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.paragraphs.length).toBe(2);
-    expect(component.sections.image).toBe('assets/images/expertise/value-maximization.png');
+    expect(component.sections.image).toBe('assets/images/expertise/value-maximization.jpg');
     expect(component.sections.reverse).toBe(false);
   });
 

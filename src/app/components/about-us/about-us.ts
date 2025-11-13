@@ -9,7 +9,7 @@ import { TimelineModule } from 'primeng/timeline';
   styleUrl: './about-us.scss',
 })
 export class AboutUs {
-  headerBgPath = 'assets/images/about-us-hero-bg.png';
+  headerBgPath = 'assets/images/about-us-hero-bg.jpg';
   headerImgStyle: any = { 'background-image': `url(${this.headerBgPath})` };
   isMobile = false;
 

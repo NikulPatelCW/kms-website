@@ -8,7 +8,7 @@ import { CommonImgAndContent } from "../../../shared/components/common-img-and-c
   styleUrl: './legal-commercial.scss',
 })
 export class LegalCommercial {
-  headerBg = 'assets/images/expertise/legal.png';
+  headerBg = 'assets/images/expertise/legal.jpg';
   headerTitle = 'Legal-Commercial';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class LegalCommercial {
       'We also assist clients in identifying red flags early and protect stakeholder interests. For family offices, we assist and ensure smooth documentation of ownership, succession, and intergenerational transfers. Our team works closely with law firms, compliance professionals, and internal stakeholders to ensure holistic support. With KMS, legal strategies are seamlessly integrated with your broader business vision.'
     ],
     note: 'Corporate and commercial Law | FEMA/RBI Regulations | Personal Laws | Mercantile and Economic Laws | IPRs | Commercial Relationships',
-    image: 'assets/images/expertise/legal-img.png',
+    image: 'assets/images/expertise/legal-img.jpg',
     contentBgImage: false,
     reverse: true,
   };

@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './contact-us.scss',
 })
 export class ContactUs {
-  headerBgPath = 'assets/images/header-bg/contact-us.png';
+  headerBgPath = 'assets/images/header-bg/contact-us.jpg';
   headerImgStyle: any = { 'background-image': `url(${this.headerBgPath})` };
   ngOnInit() {
     this.headerImgStyle = { 'background-image': `url(${this.headerBgPath})` };

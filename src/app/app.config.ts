@@ -23,7 +23,7 @@ function preloadCriticalImages(preloadService: ImagePreloadService) {
     // Preload critical above-the-fold images
     const criticalImages = [
       'assets/images/logo.svg', // Header logo
-      'assets/images/hero-bg-img.png', // Hero section poster
+      'assets/images/hero-bg-img.jpg', // Hero section poster
       'assets/images/footer-logo.svg' // Footer logo (visible on most pages)
     ];
     

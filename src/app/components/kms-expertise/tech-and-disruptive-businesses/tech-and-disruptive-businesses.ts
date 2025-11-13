@@ -8,7 +8,7 @@ import { CommonImgAndContent } from '../../../shared/components/common-img-and-c
   styleUrl: './tech-and-disruptive-businesses.scss',
 })
 export class TechAndDisruptiveBusinesses {
-  headerBg = 'assets/images/expertise/tech.png';
+  headerBg = 'assets/images/expertise/tech.jpg';
   headerTitle = 'Tech & Disruptive Businesses';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class TechAndDisruptiveBusinesses {
       'In addition to our work with high-growth startups, we conceptualize and help add digital and disruptive business dimensions to traditional or existing businesses, ensuring they remain competitive in the face of rapid transformation. Whether it’s IP identification protection, compliance, capital planning, or value maximization, our solutions are geared to future-proof your disruptive business. With KMS, innovation meets implementation with precision and foresight.',
     ],
     note: 'Tech Adoption/Integration | Artificial Intelligence | IT Risk Advisory | Technology Advisory | Digitization and e-Business',
-    image: 'assets/images/expertise/tech-img.png',
+    image: 'assets/images/expertise/tech-img.jpg',
     contentBgImage: false,
     reverse: false,
   };

@@ -24,7 +24,7 @@ describe('BusinessSuccession', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('assets/images/expertise/succession.png');
+    expect(component.headerBg).toBe('assets/images/expertise/succession.jpg');
     expect(component.headerTitle).toBe('Business Succession');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -33,7 +33,7 @@ describe('BusinessSuccession', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.title).toBe('');
     expect(component.sections.paragraphs.length).toBe(2);
-    expect(component.sections.image).toBe('assets/images/expertise/business-succession.png');
+    expect(component.sections.image).toBe('assets/images/expertise/business-succession.jpg');
     expect(component.sections.contentBgImage).toBe(false);
     expect(component.sections.reverse).toBe(true);
   });

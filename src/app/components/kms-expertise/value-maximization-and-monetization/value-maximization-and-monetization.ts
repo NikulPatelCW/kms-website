@@ -8,7 +8,7 @@ import { CommonImgAndContent } from '../../../shared/components/common-img-and-c
   styleUrl: './value-maximization-and-monetization.scss',
 })
 export class ValueMaximizationAndMonetization {
-  headerBg = 'assets/images/expertise/wealth.png';
+  headerBg = 'assets/images/expertise/wealth.jpg';
   headerTitle = 'Value Maximization And Monetization';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
@@ -18,7 +18,7 @@ export class ValueMaximizationAndMonetization {
       'For promoters, we design exit strategies and investment narratives that enhance valuation. For businesses, we enable operational turnaround, asset monetisation, and cost rationalisation initiatives. With diagnostics and performance benchmarking, we help clients make course corrections and strategic shifts with precision. Our solutions ensure that potential is not just identified but realized. With KMS, your value story becomes a value outcome.',
     ],
     note: 'Deal Value creation | Funding Options & IPO Planning | Monetisation and Exit strategies',
-    image: 'assets/images/expertise/value-maximization.png',
+    image: 'assets/images/expertise/value-maximization.jpg',
     contentBgImage: false,
     reverse: false,
   };

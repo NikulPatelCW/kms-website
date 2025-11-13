@@ -24,7 +24,7 @@ describe('StructuringAndRestructuring', () => {
   });
 
   it('should initialize header properties', () => {
-    expect(component.headerBg).toBe('assets/images/expertise/structuring.png');
+    expect(component.headerBg).toBe('assets/images/expertise/structuring.jpg');
     expect(component.headerTitle).toBe('Structuring And Restructuring');
     expect(component.headerSubTitle).toBe('Home - KMS Expertise');
   });
@@ -32,7 +32,7 @@ describe('StructuringAndRestructuring', () => {
   it('should have sections with correct structure', () => {
     expect(component.sections).toBeDefined();
     expect(component.sections.paragraphs.length).toBe(1);
-    expect(component.sections.image).toBe('assets/images/expertise/structuring-img.png');
+    expect(component.sections.image).toBe('assets/images/expertise/structuring-img.jpg');
     expect(component.sections.reverse).toBe(false);
   });
 
