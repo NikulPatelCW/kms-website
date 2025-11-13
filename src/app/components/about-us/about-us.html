@@ -1,8 +1,10 @@
-<section class="common-hero-section container" [ngStyle]="headerImgStyle">
-  <div class="separator"></div>
-  <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
-    <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">About KMS</h3>
-    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - About Us</p>
+<section class="common-hero-container" [ngStyle]="headerImgStyle">
+  <div class="common-hero-section container">
+    <div class="separator"></div>
+    <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
+      <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">About KMS</h3>
+      <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - About Us</p>
+    </div>
   </div>
 </section>
 <section class="about-kms-evolution-section container">
@@ -29,85 +31,153 @@
     technology to help businesses innovate, achieve long-term performance improvements, and build a
     solid organizational framework that will serve them far into the future.
   </p>
-  <div class="about-kms-evolution-img-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+  <div
+    class="about-kms-evolution-img-container"
+    data-aos="zoom-in"
+    data-aos-duration="1000"
+    data-aos-delay="600"
+  >
     <img src="assets/images/about-kms-evolution.svg" />
   </div>
 </section>
 
+<section class="evolution-section">
+  <h3 class="evolution-section-title" data-aos="fade-down" data-aos-duration="1000">
+    Evolution In 40 Years
+  </h3>
+  <div class="evolution-carousel">
+    <div class="evolution-group">
+      <div class="custom-scroll timeline-wrapper">
+        <div class="timeline-wrapper-before"></div>
+        <p-timeline
+          [value]="processData"
+          [layout]="isMobile ? 'vertical' : 'horizontal'"
+          [align]="isMobile ? 'left' : 'alternate'"
+          class="custom-timeline"
+        >
+          <ng-template let-item pTemplate="content">
+            <div class="about-us-timeline-content-card">
+              @if(item?.title){
+              <h4>{{ item?.title }}</h4>
+              <ul>
+                @for (point of item?.details; track $index) {
+                <li>{{ point }}</li>
+                }
+              </ul>
+              }
+            </div>
+          </ng-template>
 
-<section class=" evolution-section common-max-width mx-auto">
-  <h3 class="evolution-section-title" data-aos="fade-down" data-aos-duration="1000">Evolution In 40 Years</h3>
+          <ng-template pTemplate="marker">
+            <span class="dot"></span>
+          </ng-template>
 
-  <div class="custom-scroll timeline-wrapper">
-    <div class="timeline-wrapper-before"></div>
-    <p-timeline
-      [value]="processData"
-      [layout]="isMobile ? 'vertical' : 'horizontal'"
-      [align]="isMobile ? 'left' : 'alternate'"
-      class="custom-timeline"
-    >
-      <ng-template let-item pTemplate="content">
-        <div class="about-us-timeline-content-card">
-          @if(item?.title){
-          <h4>{{ item?.title }}</h4>
-          <ul>
-            @for (point of item?.details; track $index) {
-            <li>{{ point }}</li>
-            }
-          </ul>
-          }
-        </div>
-      </ng-template>
+          <ng-template pTemplate="opposite">
+            <span></span>
+          </ng-template>
+        </p-timeline>
+        <div class="timeline-wrapper-after"></div>
+      </div>
+    </div>
+    <div class="evolution-group">
+      <div aria-hidden class="d-none d-lg-block custom-scroll timeline-wrapper">
+        <div class="timeline-wrapper-before"></div>
+        <p-timeline
+          [value]="processData"
+          [layout]="isMobile ? 'vertical' : 'horizontal'"
+          [align]="isMobile ? 'left' : 'alternate'"
+          class="custom-timeline"
+        >
+          <ng-template let-item pTemplate="content">
+            <div class="about-us-timeline-content-card">
+              @if(item?.title){
+              <h4>{{ item?.title }}</h4>
+              <ul>
+                @for (point of item?.details; track $index) {
+                <li>{{ point }}</li>
+                }
+              </ul>
+              }
+            </div>
+          </ng-template>
 
-      <ng-template pTemplate="marker">
-        <span class="dot"></span>
-      </ng-template>
+          <ng-template pTemplate="marker">
+            <span class="dot"></span>
+          </ng-template>
 
-      <ng-template pTemplate="opposite">
-        <span></span>
-      </ng-template>
-    </p-timeline>
-    <div class="timeline-wrapper-after"></div>
+          <ng-template pTemplate="opposite">
+            <span></span>
+          </ng-template>
+        </p-timeline>
+        <div class="timeline-wrapper-after"></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="about-kms-team container mx-auto row">
-  <div class="col-12 col-lg-6 about-kms-team-img" data-aos="fade-right" data-aos-duration="1000">
-    <img class="main-img" src="assets/images/about/kms-team.jpg" />
-  </div>
-  <div class="about-kms-team-content padding-top-40 col-12 col-lg-6 d-flex pe-md-2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-    <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">The Team Behind KMS</h4>
-    <p>
-      Mr. Vinod Modha, a chartered accountant by profession with a keen interest in finance and
-      taxation, brings a refined and pragmatic approach and imparts his knowledge and expertise in
-      his work in corporate & financial advisory & consultancy. With rich and extensive experience
-      working with corporates and promoters, he has served on the board of several corporates before
-      taking on the role of strategic advisor for promoters of mid- and large-scale corporates.
-    </p>
-    <p>
-      His handpicked assembly of celebrated professionals possess unparalleled expertise in
-      advisory, consulting, handholding, and corporate strategy. An unwavering passion for
-      excellence and a tireless commitment to delivering exemplary services to clients is what
-      unites them in this journey of providing businesses with unparalleled success. Under the
-      expert guidance of the KMS team, many organizations have had successful endeavors in their
-      business journey. This team has been instrumental in providing strategic advice to some of the
-      multinational corporations for their business expansion. Their expertise and experience have
-      been crucial in providing wealth management and planning, succession planning, family office,
-      and other advisory services to Indian Promoter Families.
-    </p>
+<section class="about-kms-team-container">
+  <div class="about-kms-team container mx-auto row">
+    <div class="col-12 col-lg-6 about-kms-team-img" data-aos="fade-right" data-aos-duration="1000">
+      <img class="main-img" src="assets/images/about/kms-team.png" />
+    </div>
+    <div
+      class="about-kms-team-content padding-top-40 col-12 col-lg-6 d-flex pe-md-2"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos-delay="300"
+    >
+      <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">The Team Behind KMS</h4>
+      <p>
+        Mr. Vinod Modha, a chartered accountant by profession with a keen interest in finance and
+        taxation, brings a refined and pragmatic approach and imparts his knowledge and expertise in
+        his work in corporate & financial advisory & consultancy. With rich and extensive experience
+        working with corporates and promoters, he has served on the board of several corporates
+        before taking on the role of strategic advisor for promoters of mid- and large-scale
+        corporates.
+      </p>
+      <p>
+        His handpicked assembly of celebrated professionals possess unparalleled expertise in
+        advisory, consulting, handholding, and corporate strategy. An unwavering passion for
+        excellence and a tireless commitment to delivering exemplary services to clients is what
+        unites them in this journey of providing businesses with unparalleled success. Under the
+        expert guidance of the KMS team, many organizations have had successful endeavors in their
+        business journey. This team has been instrumental in providing strategic advice to some of
+        the multinational corporations for their business expansion. Their expertise and experience
+        have been crucial in providing wealth management and planning, succession planning, family
+        office, and other advisory services to Indian Promoter Families.
+      </p>
+    </div>
   </div>
 </section>
 <section class="about-kms-feature mx-auto">
   @for (item of kmsFeature; track $index) {
-  <div class="about-kms-feature-card" data-aos="fade-up" data-aos-duration="800" [attr.data-aos-delay]="$index * 200">
-    <img [src]="item.imgUrl" data-aos="zoom-in" data-aos-duration="600" [attr.data-aos-delay]="($index * 200) + 300" />
-    <h5 data-aos="fade-right" data-aos-duration="600" [attr.data-aos-delay]="($index * 200) + 500">{{ item.title }}</h5>
-    <p data-aos="fade-left" data-aos-duration="600" [attr.data-aos-delay]="($index * 200) + 700">{{ item.description }}</p>
+  <div
+    class="about-kms-feature-card"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    [attr.data-aos-delay]="$index * 200"
+  >
+    <img
+      [src]="item.imgUrl"
+      data-aos="zoom-in"
+      data-aos-duration="600"
+      [attr.data-aos-delay]="$index * 200 + 300"
+    />
+    <h5 data-aos="fade-right" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 500">
+      {{ item.title }}
+    </h5>
+    <p data-aos="fade-left" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 700">
+      {{ item.description }}
+    </p>
   </div>
   }
 </section>
 <section class="row about-kms-mission-vision container mx-auto">
-  <div class="col-12 col-lg-6 vision-mission-content about-kms-vision" data-aos="fade-right" data-aos-duration="1000">
+  <div
+    class="col-12 col-lg-6 vision-mission-content about-kms-vision"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+  >
     <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">KMS Vision</h4>
     <p>
       To incubate every idea, ignite every innovation, and impel every business with the right
@@ -115,7 +185,12 @@
     </p>
     <div class="card-bg"><img src="assets/images/about/Outline.svg" /></div>
   </div>
-  <div class="col-12 col-lg-6 vision-mission-content about-kms-mission" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+  <div
+    class="col-12 col-lg-6 vision-mission-content about-kms-mission"
+    data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-delay="300"
+  >
     <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="500">KMS Mission</h4>
     <p>
       Evaluate business goals to reduce uncertainty and give correct direction by providing

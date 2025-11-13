@@ -188,3 +188,33 @@
 
 <app-footer></app-footer>
 <!-- footer.component.html -->
+
+<!-- Scroll to Top Button -->
+<button 
+  class="scroll-to-top-btn" 
+  [class.visible]="showScrollToTop"
+  (click)="scrollToTop()"
+  aria-label="Scroll to top"
+  title="Scroll to top">
+  <svg class="progress-ring" width="60" height="60">
+    <circle
+      class="progress-ring-circle-bg"
+      stroke="currentColor"
+      stroke-width="3"
+      fill="transparent"
+      r="26"
+      cx="30"
+      cy="30"/>
+    <circle
+      class="progress-ring-circle"
+      stroke="currentColor"
+      stroke-width="3"
+      fill="transparent"
+      r="26"
+      cx="30"
+      cy="30"
+      [attr.stroke-dasharray]="circleCircumference"
+      [style.stroke-dashoffset]="scrollProgressOffset"/>
+  </svg>
+  <mat-icon class="scroll-icon">keyboard_arrow_up</mat-icon>
+</button>

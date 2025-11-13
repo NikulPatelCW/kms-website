@@ -604,8 +604,10 @@ main {
 /* ===============================
    About Us about kms team
 ================================== */
-.about-kms-team {
+.about-kms-team-container{
   background-color: var(--primary-color);
+}
+.about-kms-team {
   padding-block: 100px;
 }
 .about-kms-team-img {
@@ -770,10 +772,12 @@ main {
 /* ===============================
    KMS Approach Strategies
 ================================== */
+.kms-approach-strategies-container{
+  background-image: url('../public/assets/images/kms-approach/kms-approach-strategies.png');
+  background-size: cover;
+}
 
 .kms-approach-strategies {
-  background-image: url('../public/assets/images/kms-approach/kms-approach-strategies.jpg');
-  background-size: cover;
   padding-block: 100px;
   position: relative;
 
@@ -1066,9 +1070,12 @@ li {
   padding-bottom: 100px;
 }
 
-.common-hero-section {
+.common-hero-container{
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.common-hero-section {
   padding-top: 110px;
   .separator {
     border-bottom: 1px solid var(--theme-white);

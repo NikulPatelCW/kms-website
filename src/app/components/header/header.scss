@@ -134,6 +134,129 @@
   .mobile-dropdown {
     left: 0;
   }
+}
 
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(0, 43, 88) 0%, rgb(64, 126, 191) 100%);
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  overflow: visible;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgb(64, 126, 191) 0%, rgb(0, 43, 88) 100%);
+    border-color: var(--accent-color);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  .progress-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    color: var(--secondary-color);
+    width: 60px;
+    height: 60px;
+    
+    .progress-ring-circle-bg {
+      opacity: 0.3;
+    }
+    
+    .progress-ring-circle {
+      transition: stroke-dashoffset 0.1s ease;
+      stroke-linecap: round;
+    }
+  }
+
+  .scroll-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--secondary-color);
+  }
+}
+
+@media (max-width: 991px) {
+  .scroll-to-top-btn {
+    bottom: 90px; // Above mobile bottom nav
+    right: 20px;
+    width: 50px;
+    height: 50px;
+
+    .progress-ring {
+      width: 50px;
+      height: 50px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    .progress-ring circle {
+      r: 20;
+      cx: 25;
+      cy: 25;
+    }
+
+    .scroll-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .scroll-to-top-btn {
+    bottom: 85px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+
+    .progress-ring {
+      width: 45px;
+      height: 45px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    .progress-ring circle {
+      r: 18;
+      cx: 22.5;
+      cy: 22.5;
+    }
+
+    .scroll-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
