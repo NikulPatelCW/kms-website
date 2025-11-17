@@ -133,8 +133,8 @@
         <rect id="Rectangle_8716" data-name="Rectangle 8716" width="300" height="92" transform="translate(-16767 1287)"
           fill="#76c3e4" />
         <text id="number_one" data-name="number one" transform="translate(-16617 1341)" fill="#fff" font-size="24"
-          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-33.228" y="0">Vision</tspan>
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Vision</tspan>
         </text>
       </g>
       <g id="Group_173067" data-name="Group 173067" transform="translate(-1287 -641)">
@@ -152,8 +152,8 @@
         <rect id="Rectangle_8716-2" data-name="Rectangle 8716" width="300" height="90"
           transform="translate(-16767 1289)" fill="#76c3e4" />
         <text id="number_one-2" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
-          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-46.02" y="0">Strategy</tspan>
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Strategy</tspan>
         </text>
       </g>
       <g id="Group_173067-2" data-name="Group 173067" transform="translate(-1287 -641)">
@@ -171,8 +171,8 @@
         <rect id="Rectangle_8716-3" data-name="Rectangle 8716" width="300" height="90"
           transform="translate(-16767 1289)" fill="#76c3e4" />
         <text id="number_one-3" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
-          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-60.012" y="0">Positioning</tspan>
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Positioning</tspan>
         </text>
       </g>
       <g id="Group_173067-3" data-name="Group 173067" transform="translate(-1287 -641)">
@@ -190,8 +190,8 @@
         <rect id="Rectangle_8716-4" data-name="Rectangle 8716" width="300" height="90"
           transform="translate(-16767 1289)" fill="#76c3e4" />
         <text id="number_one-4" data-name="number one" transform="translate(-16617 1342)" fill="#fff" font-size="24"
-          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-137.388" y="0">Control and management</tspan>
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Control and management</tspan>
         </text>
       </g>
       <g id="Group_173067-4" data-name="Group 173067" transform="translate(-1287 -641)">
@@ -221,9 +221,9 @@
             <circle cx="125.5" cy="125.5" r="125" fill="none" />
           </g>
           <text id="number_one-5" data-name="number one" transform="translate(944 487.5)" fill="#1f5b99" font-size="32"
-            font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-            <tspan x="-62.304" y="0">Business</tspan>
-            <tspan x="-62.832" y="46">Verticals</tspan>
+            font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+            <tspan x="0" y="0">Business</tspan>
+            <tspan x="-3" y="40">Verticals</tspan>
           </text>
         </g>
       </g>
@@ -253,10 +253,10 @@
               <rect id="Rectangle_8717" data-name="Rectangle 8717" width="345" height="114"
                 transform="translate(-16784 1413)" fill="#1f5b99" />
               <text id="number_one-6" data-name="number one" transform="translate(-16611 1461)" fill="#fff"
-                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-                <tspan x="-108.624" y="0">Estate management</tspan>
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+                <tspan x="0" y="0">Estate management</tspan>
                 <tspan font-family="MultiDisplay-Regular, MultiDisplay" font-weight="400">
-                  <tspan x="-110.064" y="34">(Legacy preservation)</tspan>
+                  <tspan x="0" y="34">(Legacy preservation)</tspan>
                 </tspan>
               </text>
             </g>
@@ -275,8 +275,8 @@
               <rect id="Rectangle_8718" data-name="Rectangle 8718" width="345" height="114"
                 transform="translate(-16784 1547)" fill="#1f5b99" />
               <text id="number_one-7" data-name="number one" transform="translate(-16611 1612)" fill="#fff"
-                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-                <tspan x="-98.34" y="0">Wealth protection</tspan>
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+                <tspan x="0" y="0">Wealth protection</tspan>
               </text>
             </g>
             <g id="Group_173014" data-name="Group 173014" transform="translate(0 261)">
@@ -294,8 +294,8 @@
               <rect id="Rectangle_8719" data-name="Rectangle 8719" width="345" height="114"
                 transform="translate(-16784 1681)" fill="#1f5b99" />
               <text id="number_one-8" data-name="number one" transform="translate(-16611 1746)" fill="#fff"
-                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-                <tspan x="-103.272" y="0">Realisation of value</tspan>
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+                <tspan x="0" y="0">Realisation of value</tspan>
               </text>
             </g>
             <g id="Group_173015" data-name="Group 173015" transform="translate(0 395)">
@@ -313,8 +313,8 @@
               <rect id="Rectangle_8716-5" data-name="Rectangle 8716" width="345" height="114"
                 transform="translate(-16784 1279)" fill="#1f5b99" />
               <text id="number_one-9" data-name="number one" transform="translate(-16611 1344)" fill="#fff"
-                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-                <tspan x="-59.508" y="0">Succession</tspan>
+                font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+                <tspan x="0" y="0">Succession</tspan>
               </text>
             </g>
             <g id="Group_173016" data-name="Group 173016" transform="translate(0 529)">
@@ -395,8 +395,8 @@
             <rect id="Rectangle_8717-2" data-name="Rectangle 8717" width="345" height="114"
               transform="translate(-16784 1413)" fill="#1f5b99" />
             <text id="number_one-10" data-name="number one" transform="translate(-16611 1478)" fill="#fff"
-              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-              <tspan x="-40.872" y="0">Growth</tspan>
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+              <tspan x="0" y="0">Growth</tspan>
             </text>
           </g>
           <g id="Group_173007" data-name="Group 173007" transform="translate(0 134)">
@@ -414,8 +414,8 @@
             <rect id="Rectangle_8716-6" data-name="Rectangle 8716" width="345" height="114"
               transform="translate(-16784 1279)" fill="#1f5b99" />
             <text id="number_one-11" data-name="number one" transform="translate(-16611 1344)" fill="#fff"
-              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-              <tspan x="-125.46" y="0">Improved performance</tspan>
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+              <tspan x="0" y="0">Improved performance</tspan>
             </text>
           </g>
           <g id="Group_173008" data-name="Group 173008" transform="translate(0 268)">
@@ -433,10 +433,10 @@
             <rect id="Rectangle_8717-3" data-name="Rectangle 8717" width="345" height="114"
               transform="translate(-16784 1413)" fill="#1f5b99" />
             <text id="number_one-12" data-name="number one" transform="translate(-16611 1461)" fill="#fff"
-              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-              <tspan x="-73.56" y="0">Sustainability</tspan>
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+              <tspan x="0" y="0">Sustainability</tspan>
               <tspan font-family="MultiDisplay-Regular, MultiDisplay" font-weight="400">
-                <tspan x="-126.084" y="34">(Overcoming challenges)</tspan>
+                <tspan x="0" y="34">(Overcoming challenges)</tspan>
               </tspan>
             </text>
           </g>
@@ -455,8 +455,8 @@
             <rect id="Rectangle_8717-4" data-name="Rectangle 8717" width="345" height="114"
               transform="translate(-16784 1413)" fill="#1f5b99" />
             <text id="number_one-13" data-name="number one" transform="translate(-16611 1478)" fill="#fff"
-              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-              <tspan x="-77.028" y="0">Value creation</tspan>
+              font-size="24" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+              <tspan x="0" y="0">Value creation</tspan>
             </text>
           </g>
           <g id="Group_173010" data-name="Group 173010" transform="translate(0 536)">
@@ -475,8 +475,8 @@
           d="M-20104.932,2252.071l137.617-116.745s59.35,76.308,61.307,193.053-71.09,200.228-71.09,200.228l-131.094-123.919s20.217-37.665,20.217-76.308S-20104.932,2252.071-20104.932,2252.071Z"
           transform="translate(-20957.328 -18969.969) rotate(-90)" fill="#76c3e4" />
         <text id="number_one-14" data-name="number one" transform="translate(-18625 1048)" fill="#fff" font-size="32"
-          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-75.92" y="0">Promoters</tspan>
+          font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Promoters</tspan>
         </text>
       </g>
       <g id="Group_173062" data-name="Group 173062">
@@ -484,8 +484,8 @@
           d="M-19909.229,2252.071l-137.617-116.745s-59.35,76.308-61.307,193.053,71.09,200.228,71.09,200.228l131.094-123.919s-20.217-37.665-20.217-76.308S-19909.229,2252.071-19909.229,2252.071Z"
           transform="translate(1134.691 -1055.325)" fill="#1f5b99" />
         <text id="number_one-15" data-name="number one" transform="translate(-18881.389 1287.999)" fill="#fff"
-          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-62.304" y="0">Business</tspan>
+          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Business</tspan>
         </text>
       </g>
       <g id="Group_173061" data-name="Group 173061">
@@ -493,9 +493,9 @@
           d="M-20104.932,2252.071l137.617-116.745s59.35,76.308,61.307,193.053-71.09,200.228-71.09,200.228l-131.094-123.919s20.217-37.665,20.217-76.308S-20104.932,2252.071-20104.932,2252.071Z"
           transform="translate(1613.611 -1055.325)" fill="#1f5b99" />
         <text id="number_one-16" data-name="number one" transform="translate(-18382.389 1264.999)" fill="#fff"
-          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500">
-          <tspan x="-48.336" y="0">Family</tspan>
-          <tspan x="-43.36" y="46">Office</tspan>
+          font-size="32" font-family="MultiDisplay-Medium, MultiDisplay" font-weight="500" text-anchor="middle">
+          <tspan x="0" y="0">Family</tspan>
+          <tspan x="-5" y="40">Office</tspan>
         </text>
       </g>
     </g>

@@ -440,9 +440,24 @@ main {
   }
   ul {
     margin-left: 25px;
+    list-style: none;
     li {
       font-size: var(--fs-sub-title);
       color: var(--muted-text);
+      position: relative;
+      padding-bottom: 10px;
+      &::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        background-image: url(/assets/icons/blue-dot.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: -16px;
+        top: 9px;    
+      }
     }
   }
 }
@@ -1120,12 +1135,12 @@ li {
   border-bottom: 1px solid var(--border-separator);
 }
 
-ul li {
-  &::marker {
-    color: var(--primary-color); /* Sets the color of the bullet point */
-    font-size: 30px; /* Sets the size of the bullet point */
-  }
-}
+// ul li {
+//   &::marker {
+//     color: var(--primary-color); /* Sets the color of the bullet point */
+//     font-size: 30px; /* Sets the size of the bullet point */
+//   }
+// }
 
 .light-blue {
   color: var(--accent-color) !important;
@@ -1232,6 +1247,9 @@ ul li {
   
   .navbar-toggler {
     display: none !important;
+  }
+  .home-process-content-card ul li::before {
+    top: 7px;
   }
 }
 @media (max-width: 768px) {
