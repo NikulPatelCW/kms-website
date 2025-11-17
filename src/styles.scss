@@ -1189,6 +1189,13 @@ li {
       left: calc(100% - 488px);
     }
   }
+  
+    .home-know-kms-section .home-know-kms-content-card ul li:before {
+    width: 14px;
+    height: 14px;
+    left: -22px;
+    top: 4px;
+}
 
   .image-wrapper {
     justify-content: center;
