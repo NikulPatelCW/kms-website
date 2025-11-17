@@ -11,20 +11,21 @@
 <section class="kms-expertise-common-section common-max-width mx-auto" [ngClass]="{ 'kms-expertise-bg': sections.contentBgImage }">
   <div class="row container flex-column-reverse flex-lg-row" [ngClass]="{'flex-lg-row-reverse':sections.reverse}">
     <div
+    data-aos="fade-right" data-aos-duration="800" data-aos-delay="200"
       class="kms-approach-advisory-bg-content col-12 col-lg-6 col-6 common-title-description-content" data-aos="fade-right" data-aos-duration="1000"
     >
       @if (sections.title) {
       <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">{{ sections.title }}</h4>
       } @for (item of sections.paragraphs; track $index) {
-      <p data-aos="fade-up" data-aos-duration="800" [attr.data-aos-delay]="($index * 200) + 400">{{ item }}</p>
+      <p>{{ item }}</p>
       }     
       @if (sections.note) {
-      <p class="light-blue pt-1" data-aos="fade-left" data-aos-duration="600" data-aos-delay="800">
+      <p class="light-blue pt-1">
         {{ sections.note }}
       </p>
       }
     </div>
-    <div class="col-12 col-lg-6 kms-expertise-img " [ngClass]="{'justify-content-lg-start':sections.reverse}" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+    <div class="col-12 col-lg-6 kms-expertise-img " [ngClass]="{'justify-content-lg-start':sections.reverse}" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
       <img class="main-img" [src]="sections.image"/>
     </div>
   </div>

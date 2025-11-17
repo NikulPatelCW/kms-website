@@ -42,11 +42,11 @@ export class Home implements OnInit {
     },
     {
       title: 'Advisory & Solution',
-      details: ['Value-Added Solutions', 'Strategy to create value and alignment'],
+      details: ['Value-added solutions', 'Strategy to Create Value and Alignment'],
     },
     {
       title: 'Implementation',
-      details: ['Systematic Planning', 'Implementation Management'],
+      details: ['Systematic planning', 'Implementation management'],
     },
     {
       title: 'Review & Monitoring ',
@@ -55,7 +55,7 @@ export class Home implements OnInit {
   ];
   knowKMSData: { title: string; details: string[] }[] = [
     {
-      title: 'A robust group',
+      title: 'A Robust Group',
       details: [
         'More than 40 years of experience in corporate, family and promoter advisory and consultancy',
         'Strong team of financial professionals',
@@ -81,26 +81,26 @@ export class Home implements OnInit {
     {
       title: 'Field Expertise – Consortium of Experts',
       details: [
-        'Investment & wealth Advisory and Management, Merchant Banking, I Banking & Other finance Functions',
-        'Overseas Relationship',
-        'Due Diligence',
-        'Taxation & Transfer pricing',
-        'FEMA & Exchange Regulations',
-        'Compliance & Secretarial',
+        'Investment & wealth advisory and management, merchant banking, I banking & other finance functions',
+        'Overseas relationship',
+        'Due diligence',
+        'Taxation & transfer pricing',
+        'FEMA & Exchange regulations',
+        'Compliance & secretarial',
       ],
     },
     {
-      title: 'Scientific way of working',
+      title: 'Scientific Way of Working',
       details: [
         'Special fusion of business savvy and scientific expertise',
         'Comprehend the nuances of organizational dynamics',
         'Insights for well-informed business decisions',
-        'Identify blind spots and provide fresh perspective.',
+        'Identify blind spots and provide fresh perspective',
         'Research-based client solutions',
       ],
     },
     {
-      title: 'Interlinked services',
+      title: 'Interlinked Services',
       details: [
         'Availability of a gamut of standalone services - structuring, legal-commercial, taxation',
         'Tailor-made solutions as per client needs',
