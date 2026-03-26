@@ -1,21 +1,36 @@
-import { Component, ElementRef, OnInit, signal, ViewChild, PLATFORM_ID, Inject } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  signal,
+  ViewChild,
+} from '@angular/core';
 import { SharedImports } from '../../shared/shared-imports';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { isPlatformBrowser } from '@angular/common';
+import { TimelineModule } from 'primeng/timeline';
 
 @Component({
   selector: 'app-home',
-  imports: [SharedImports],
+  imports: [SharedImports, TimelineModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home implements OnInit {
+export class Home implements OnInit, AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-  @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
   @ViewChild('heroVideo') heroVideo!: ElementRef<HTMLVideoElement>;
 
-  showLeftArrow = false;
-  showRightArrow = true;
+  isMobile = false;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.checkMobile();
+  }
+
   showMore = signal(false);
   carouselOptions: OwlOptions = {
     items: 1,
@@ -37,100 +52,96 @@ export class Home implements OnInit {
 
   processData: { title: string; details: string[] }[] = [
     {
-      title: 'Discovery',
-      details: ['Financial health check', 'Legal and structural checks'],
+      title: '1981-85',
+      details: [
+        'Taxation Planning & Advisory',
+        'Strategic Advisory',
+        'Legal/Commercial Advisory',
+        'JV & Technology Transfer Relationships',
+        'Legal-commercial & Documentation',
+        'FEMA & Exchange Controls',
+      ],
     },
     {
-      title: 'Advisory & Solution',
-      details: ['Value-added solutions', 'Strategy to Create Value and Alignment'],
+      title: '1985-90',
+      details: [
+        'Business Concepts, Projects & Implementation Advisory',
+        'Fund Raising, IPO, Private Equity Advisory',
+        'Transaction Advisory',
+      ],
     },
     {
-      title: 'Implementation',
-      details: ['Systematic planning', 'Implementation management'],
+      title: '1990-95',
+      details: ['Due Diligence', 'PE Investment Advisory', 'Public Offering', 'Structuring & Restructuring'],
     },
     {
-      title: 'Review & Monitoring ',
-      details: ['Performance evaluation', 'Review objectives and actions meeting expectations'],
+      title: '1995-2000',
+      details: ['Telecom Infra & Power Project', 'Turnaround & Revival Advisory'],
+    },
+    {
+      title: '2000-2005',
+      details: ['Arbitration & Litigation Support', 'Cross-border Business Expansion'],
+    },
+    {
+      title: '2005-2010',
+      details: ['Business Strategic Advisory', 'SEZ & Industrial Parks', 'Corporate Governance', 'Functional & Process Evaluation'],
+    },
+    {
+      title: '2010-2015',
+      details: ['Microfinance, Venture Funds, AIF, Investment & Structuring Advisory'],
+    },
+    {
+      title: '2015-2020',
+      details: ['Succession Planning & Management', 'Family Offices', 'Technology Business Initiatives', 'Strategic Investments', 'Overseas Infra Projects'],
+    },
+    {
+      title: '2020-2022',
+      details: ['Entrepreneur Mentoring & Support Services', 'Fintech Initiatives', 'Advanced Tech Initiatives'],
     },
   ];
-  knowKMSData: { title: string; details: string[] }[] = [
+  kmsFeature = [
     {
-      title: 'A Robust Group',
-      details: [
-        'More than 40 years of experience in corporate, family and promoter advisory and consultancy',
-        'Strong team of financial professionals',
-        'Results-driven advice to clients',
-        'Innovative and forward-thinking',
-        'Comprehensive solutions that suit client requirements',
-      ],
+      imgUrl: 'assets/images/about/customer.svg',
+      title: 'Client centered',
+      description:
+        'We make it our business to understand what is important to our clients. Listening to client challenges is the foundation for creating and advising solutions that best suit the need. We skillfully combine our expertise and capabilities across diverse verticals to help reach your goals.',
     },
     {
-      title: 'KMS Network & Connects',
-      details: [
-        'Advocates & Legal Practitioners',
-        'Chartered Accountants',
-        'Company Secretaries',
-        'Valuers',
-        'Investment Advisors',
-        'Investment Bankers',
-        'Tax Advisors/ Consultants',
-        'Technology Advisors and Developers',
-        'Trustees & Compliance officers',
-      ],
+      imgUrl: 'assets/images/about/time-management.svg',
+      title: 'Power of integration',
+      description:
+        'We connect services, verticals, associations, and experience across different industries to generate solutions. Expertise from over 40+ years, people and associations worked with connect seamlessly to deliver the best and create strength from connections.',
     },
     {
-      title: 'Field Expertise – Consortium of Experts',
-      details: [
-        'Investment & wealth advisory and management, merchant banking, I banking & other finance functions',
-        'Overseas relationship',
-        'Due diligence',
-        'Taxation & transfer pricing',
-        'FEMA & Exchange regulations',
-        'Compliance & secretarial',
-      ],
+      imgUrl: 'assets/images/about/contract.svg',
+      title: 'Responsibility built-in',
+      description:
+        'Responsibility is built into everything we do. Doing the right thing for our clients and their business is fundamental to our legacy and long-term success. We act and advise as per the need of the hour, delivering positive and long-term change responsibly.',
     },
     {
-      title: 'Scientific Way of Working',
-      details: [
-        'Special fusion of business savvy and scientific expertise',
-        'Comprehend the nuances of organizational dynamics',
-        'Insights for well-informed business decisions',
-        'Identify blind spots and provide fresh perspective',
-        'Research-based client solutions',
-      ],
-    },
-    {
-      title: 'Interlinked Services',
-      details: [
-        'Availability of a gamut of standalone services - structuring, legal-commercial, taxation',
-        'Tailor-made solutions as per client needs',
-        'Independent and interlinked services',
-      ],
-    },
-     {
-      title: 'Agile Transformation',
-      details: [
-        'A strategy-driven approach',
-        'Promotes progress while delivering tangible results',
-        'Defining objective and developing implementation strategy',
-        'Research based finding and applications',
-        'Transformative and future-ready solutions',
-      ],
+      imgUrl: 'assets/images/about/thumb-up.svg',
+      title: 'Collaborate to innovate',
+      description:
+        'Our extended associations and people act as one team. Bringing together our knowledge, skill, and expertise across all disciplines, sectors, and industries, we are able to unearth the true goal and actions needed to get your business to great heights.',
     },
   ];
   ngOnInit() {
+    this.checkMobile();
     // Auto-start video when home page loads
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => this.playVideo(), 100);
     }
   }
 
-   ngAfterViewInit():void {
-    // Wait a tick to ensure layout is rendered before centering
+  checkMobile() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth <= 991;
+    }
+  }
+
+  ngAfterViewInit(): void {
     setTimeout(() => {
       this.playVideo();
-      this.centerFirstCard();
-      this.updateArrows();
     });
   }
 
@@ -143,31 +154,5 @@ export class Home implements OnInit {
         video.play().catch(() => {});
       }
     }
-  }
-   centerFirstCard() {
-    const el = this.scrollContainer.nativeElement;
-    const firstCard = el.querySelector('.home-know-kms-content-card') as HTMLElement;
-    if (!firstCard) return;
-
-    const scrollTo =
-      firstCard.offsetLeft - (el.clientWidth - firstCard.offsetWidth) / 2;
-
-    el.scrollLeft = scrollTo;
-  }
-
-  onScroll() {
-    this.updateArrows();
-  }
-
-  updateArrows() {
-    const el = this.scrollContainer.nativeElement;
-    this.showLeftArrow = el.scrollLeft > 0;
-    this.showRightArrow = el.scrollLeft + el.clientWidth < el.scrollWidth - 5;
-  }
-
-  scroll(direction: 'left' | 'right') {
-    const el = this.scrollContainer.nativeElement;
-    const scrollAmount = el.clientWidth * 0.8;
-    el.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
   }
 }

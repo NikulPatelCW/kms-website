@@ -1,0 +1,11 @@
+/* Layout uses global KMS Approach section classes from styles.scss */
+
+.team-member-tagline {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.kms-approach-advisory .team-member-tagline.light-blue {
+  color: var(--theme-white);
+  opacity: 0.95;
+}

@@ -28,6 +28,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Local reCAPTCHA secret (see api/recaptcha.secret.example.php)
+/api/recaptcha.secret.php
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/

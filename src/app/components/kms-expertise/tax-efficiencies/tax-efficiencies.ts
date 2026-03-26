@@ -19,7 +19,7 @@ export class TaxEfficiencies {
       'For high-net-worth individuals and families, we help structure personal wealth and cross-border assets to reduce exposure and enhance long-term financial health. Our tax diagnostics bring clarity to complex matters, helping clients make informed decisions with confidence. Whether you’re dealing with M&A, cross-border structures, or regulatory disclosures, we deliver clarity, savings, and peace of mind. Our approach is strategic, predictive, and tailored to your specific needs.',
     ],
     note: 'Direct Taxation | Tax Treaties | Transfer pricing | Global Taxation | Tax Efficiency and Structuring',
-    image: 'assets/images/expertise/tax-img.jpg',
+    image: 'assets/images/expertise/tax-img.png',
     contentBgImage: false,
     reverse: true,
   };

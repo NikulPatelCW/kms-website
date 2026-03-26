@@ -19,7 +19,7 @@ export class BusinessAdvisory {
       'Whether youre scaling operations, navigating change, innovating in developing sectors, or restructuring business models, our scientific and process-driven approach ensures recommendations that are viable and measurable in impact. Through active collaboration, we help businesses position themselves to capitalize on market opportunities while mitigating risk. From planning to execution, our business advisory is geared to fuel consistent performance and foster a brighter future for your enterprise.'
     ],
     note:'Corporate Governance | Growth & Positioning | Innovation Strategy & Delivery | Management Strategies',
-    image: 'assets/images/expertise/business-advisory-img.jpg',
+    image: 'assets/images/expertise/business-advisory-img.png',
     contentBgImage: true,
     reverse: false,
   };

@@ -28,7 +28,7 @@ export class Industries {
         'Charities & Trusts',
         'Chemicals & Fertilisers',
         'Consumer Products & Durables',
-        'Education & Training',
+        // 'Education & Training',
       ],
     },
     {
@@ -45,7 +45,7 @@ export class Industries {
         'Technology & Telecommunications',
         'Fintech, VDA & Tokenisation',
         'Textiles',
-        'Tourism & Hospitality',
+        // 'Tourism & Hospitality',
       ],
     },    
   ];

@@ -10,7 +10,10 @@
 <section class="about-kms-evolution-section container">
   <h4 data-aos="fade-right" data-aos-duration="800">KMS Evolution</h4>
   <p class="text-justify">
-    Since its inception more than four decades ago, KMS has functioned as a solid partnership bound
+    Since its inception more than 45 years ago, KMS has functioned as a solid partnership bound by a shared set of principles and the desire to bring about long-lasting, constructive change. Founded in 1981 in Ahmedabad, KMS started off by providing corporate, legal, tax, and advisory services. Within just five years of business, the entity grew to offer legal advice, project and implementation management, fundraising, initial public offerings, and structuring. The following few decades turned out to be a time of expansion, innovation, collaborations, and partnerships. Turnaround and revival advisory, microfinance, venture funds, AIF, investment & structuring advisory, business strategic advisory, SEZ & Industrial Park, corporate governance, cross-border business expansion, succession planning & management, family office, technology business initiative, strategic investment, and entrepreneur mentoring & support are just a few of the advisory services the entity has diversified to offer.
+  </p>
+  <p class="text-justify">
+    Since its inception more than 45 years ago, KMS has functioned as a solid partnership bound
     by a shared set of principles and the desire to bring about long-lasting, constructive change.
     Founded in 1981 in Ahmedabad, KMS started off by providing corporate, legal, tax, and advisory
     services. Within just five years of business, the entity grew to offer legal advice, project and
@@ -21,6 +24,9 @@
     business expansion, succession planning & management, family office, technology business
     initiative, strategic investment, and entrepreneur mentoring & support are just a few of the
     advisory services the entity has diversified to offer.
+  </p>
+  <p class="text-justify">
+    KMS stands on a strong foundation shaped by the visionary leadership and enduring mentorship of P. D. Kunte. A distinguished expert in various laws including taxation, he was known for his rare ability to interlink legal provisions and craft innovative, effective solutions. His original thinking in tax planning, combined with unwavering ethical standards and a commitment to conflict-free practice, continues to define the firm’s philosophy. His principles of excellence, integrity, and forward-thinking remain deeply embedded in KMS’s work, guiding its approach and inspiring its continued growth.
   </p>
   <p class="text-justify">
     Given the entity’s rapid growth in terms of clientele, services rendered, and sectors covered,
@@ -40,82 +46,95 @@
     <img src="assets/images/about-kms-evolution.svg" />
   </div>
 </section>
+<!-- The Process Section -->
 
-<section class="evolution-section">
-  <h3 class="evolution-section-title" data-aos="fade-down" data-aos-duration="1000">
-    Evolution In 40 Years
-  </h3>
-  <div class="evolution-carousel">
-    <div class="evolution-group">
-      <div class="custom-scroll timeline-wrapper">
-        <div class="timeline-wrapper-before"></div>
-        <p-timeline
-          [value]="processData"
-          [layout]="isMobile ? 'vertical' : 'horizontal'"
-          [align]="isMobile ? 'left' : 'alternate'"
-          class="custom-timeline"
-        >
-          <ng-template let-item pTemplate="content">
-            <div class="about-us-timeline-content-card">
-              @if(item?.title){
-              <h4>{{ item?.title }}</h4>
-              <ul>
-                @for (point of item?.details; track $index) {
-                <li>{{ point }}</li>
-                }
-              </ul>
-              }
-            </div>
-          </ng-template>
-
-          <ng-template pTemplate="marker">
-            <span class="dot"></span>
-          </ng-template>
-
-          <ng-template pTemplate="opposite">
-            <span></span>
-          </ng-template>
-        </p-timeline>
-        <div class="timeline-wrapper-after"></div>
-      </div>
+<section class="home-process-section common-section-top-spacing">
+  <div class="container overflow-x-hidden">
+    <div class="common-section-title text-center" data-aos="fade-down" data-aos-duration="1000">
+      <h3>THE PROCESS</h3>
+      <p>Positioning businesses to achieve success</p>
     </div>
-    <div class="evolution-group">
-      <div aria-hidden class="d-none d-lg-block custom-scroll timeline-wrapper">
-        <div class="timeline-wrapper-before"></div>
-        <p-timeline
-          [value]="processData"
-          [layout]="isMobile ? 'vertical' : 'horizontal'"
-          [align]="isMobile ? 'left' : 'alternate'"
-          class="custom-timeline"
-        >
-          <ng-template let-item pTemplate="content">
-            <div class="about-us-timeline-content-card">
-              @if(item?.title){
-              <h4>{{ item?.title }}</h4>
-              <ul>
-                @for (point of item?.details; track $index) {
-                <li>{{ point }}</li>
-                }
-              </ul>
-              }
-            </div>
-          </ng-template>
-
-          <ng-template pTemplate="marker">
-            <span class="dot"></span>
-          </ng-template>
-
-          <ng-template pTemplate="opposite">
-            <span></span>
-          </ng-template>
-        </p-timeline>
-        <div class="timeline-wrapper-after"></div>
+    <div class="home-process-content">
+      @for (item of processData; track $index) {
+      <div
+        class="home-process-content-card"
+        [attr.data-aos]="$index % 2 === 0 ? 'fade-left' : 'fade-right'"
+        data-aos-duration="800"
+        [attr.data-aos-delay]="$index * 200"
+      >
+        <h4>{{ item?.title }}</h4>
+        <div class="separator"></div>
+        <ul>
+          @for (subItem of item?.details; track $index) {
+          <li>{{ subItem }}</li>
+          }
+        </ul>
       </div>
+      }
     </div>
   </div>
 </section>
 
-<section class="about-kms-team-container">
+<!-- home-know-kms-section -->
+<section class="home-know-kms-section overflow-hidden">
+  <div class="">
+    <div class="common-section-title" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-center">KNOW KMS</h3>
+    </div>
+    <div
+      class="kms-scroll-container"
+      data-aos="fade-up"
+      data-aos-duration="1200"
+      data-aos-delay="300"
+    >
+      @if (showLeftArrow) {<button
+        mat-icon-button
+        class="kms-scroll-btn left"
+        (click)="scroll('left')"
+      >
+        <mat-icon>arrow_back</mat-icon></button
+      >}
+
+      <div class="home-know-kms-content" #scrollContainer (scroll)="onScroll()">
+        @for (item of knowKMSData; track $index) {
+        <div
+          class="home-know-kms-content-card"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          [attr.data-aos-delay]="$index * 200"
+        >
+          <h4
+            data-aos="fade-right"
+            data-aos-duration="600"
+            [attr.data-aos-delay]="$index * 200 + 300"
+          >
+            {{ item.title }}
+          </h4>
+          <ul>
+            @for (subItem of item?.details; track $index) {
+            <li
+              data-aos="fade-left"
+              data-aos-duration="500"
+              [attr.data-aos-delay]="$index * 100 + 500"
+            >
+              {{ subItem }}
+            </li>
+            }
+          </ul>
+        </div>
+        }
+      </div>
+      @if (showRightArrow) {<button
+        mat-icon-button
+        class="kms-scroll-btn right"
+        (click)="scroll('right')"
+      >
+        <mat-icon>arrow_forward</mat-icon></button
+      >}
+    </div>
+  </div>
+</section>
+<!-- <section class="about-kms-team-container">
   <div class="about-kms-team container mx-auto row">
     <div class="col-12 col-lg-6 about-kms-team-img" data-aos="fade-right" data-aos-duration="1000">
       <img class="main-img" src="assets/images/about/kms-team.png" />
@@ -148,30 +167,7 @@
       </p>
     </div>
   </div>
-</section>
-<section class="about-kms-feature mx-auto">
-  @for (item of kmsFeature; track $index) {
-  <div
-    class="about-kms-feature-card"
-    data-aos="fade-up"
-    data-aos-duration="800"
-    [attr.data-aos-delay]="$index * 200"
-  >
-    <img
-      [src]="item.imgUrl"
-      data-aos="zoom-in"
-      data-aos-duration="600"
-      [attr.data-aos-delay]="$index * 200 + 300"
-    />
-    <h5 data-aos="fade-right" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 500">
-      {{ item.title }}
-    </h5>
-    <p data-aos="fade-left" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 700">
-      {{ item.description }}
-    </p>
-  </div>
-  }
-</section>
+</section> -->
 <section class="row about-kms-mission-vision container mx-auto">
   <div
     class="col-12 col-lg-6 vision-mission-content about-kms-vision"

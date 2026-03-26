@@ -51,19 +51,93 @@
         </h2>
 
         <form [formGroup]="contactForm" (ngSubmit)="submit()">
+          @if (alertSuccess) {
+          <div
+            class="alert alert-success alert-dismissible fade show mb-3"
+            role="alert"
+          >
+            {{ alertMessage }}
+            <button
+              type="button"
+              class="btn-close"
+              (click)="dismissSuccess()"
+              aria-label="Close"
+            ></button>
+          </div>
+          }
+          @if (alertDanger) {
+          <div
+            class="alert alert-danger alert-dismissible fade show mb-3"
+            role="alert"
+          >
+            {{ alertMessage }}
+            <button
+              type="button"
+              class="btn-close"
+              (click)="dismissDanger()"
+              aria-label="Close"
+            ></button>
+          </div>
+          }
+
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Full Name</mat-label>
-            <input matInput formControlName="fullName" placeholder="Enter name" />
+            <input matInput formControlName="fullName" placeholder="Enter name" autocomplete="name" />
+            @if (contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched) {
+            <mat-error>
+              @if (contactForm.get('fullName')?.hasError('required')) {
+              Full name is required.
+              } @else if (contactForm.get('fullName')?.hasError('minlength')) {
+              Please enter at least 2 characters.
+              } @else if (contactForm.get('fullName')?.hasError('server')) {
+              {{ contactForm.get('fullName')?.getError('server') }}
+              }
+            </mat-error>
+            }
           </mat-form-field>
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Email</mat-label>
-            <input matInput formControlName="email" placeholder="Enter your email" />
+            <input
+              matInput
+              type="email"
+              formControlName="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+            <mat-error>
+              @if (contactForm.get('email')?.hasError('required')) {
+              Email is required.
+              } @else if (contactForm.get('email')?.hasError('email')) {
+              Please enter a valid email address.
+              } @else if (contactForm.get('email')?.hasError('server')) {
+              {{ contactForm.get('email')?.getError('server') }}
+              }
+            </mat-error>
+            }
           </mat-form-field>
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Phone</mat-label>
-            <input matInput formControlName="phone" placeholder="Enter your phone number" />
+            <input
+              matInput
+              type="tel"
+              formControlName="phone"
+              placeholder="Enter your phone number"
+              autocomplete="tel"
+            />
+            @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
+            <mat-error>
+              @if (contactForm.get('phone')?.hasError('required')) {
+              Phone is required.
+              } @else if (contactForm.get('phone')?.hasError('pattern')) {
+              Enter a valid phone number (8–40 characters: digits, +, spaces, brackets).
+              } @else if (contactForm.get('phone')?.hasError('server')) {
+              {{ contactForm.get('phone')?.getError('server') }}
+              }
+            </mat-error>
+            }
           </mat-form-field>
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
@@ -74,13 +148,40 @@
               rows="4"
               placeholder="How can we help you?"
             ></textarea>
+            @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+            <mat-error>
+              @if (contactForm.get('message')?.hasError('maxlength')) {
+              Message is too long (max 5000 characters).
+              } @else if (contactForm.get('message')?.hasError('server')) {
+              {{ contactForm.get('message')?.getError('server') }}
+              }
+            </mat-error>
+            }
           </mat-form-field>
 
-          <!-- <div class="captcha-box mb-4">
-            <mat-checkbox formControlName="captcha"> I'm not a robot </mat-checkbox>
-          </div> -->
-          <button class="contact-us-form-btn">Send a message<mat-icon>keyboard_arrow_right</mat-icon></button>
-         
+          @if (recaptchaSiteKey) {
+          <div class="contact-recaptcha-wrap mb-3">
+            @if (recaptchaLoadError) {
+            <div class="alert alert-warning" role="alert">
+              reCAPTCHA could not be loaded. Check your network or ad blocker, then refresh the page.
+            </div>
+            } @else {
+            <div #recaptchaHost class="g-recaptcha-host"></div>
+            }
+          </div>
+          }
+
+          <button
+            type="submit"
+            class="contact-us-form-btn"
+            [disabled]="submitting"
+          >
+            @if (submitting) {
+            Sending…
+            } @else {
+            Send a message<mat-icon>keyboard_arrow_right</mat-icon>
+            }
+          </button>
         </form>
       </div>
     </div>

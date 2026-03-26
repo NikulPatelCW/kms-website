@@ -1,0 +1,70 @@
+<section class="common-hero-container" [ngStyle]="headerImgStyle">
+  <div class="common-hero-section container">
+    <div class="separator"></div>
+    <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
+      <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">The Team</h3>
+      <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - The Team</p>
+    </div>
+  </div>
+</section>
+
+<section class="container pb-5 providing-section mx-auto common-section-top-spacing">
+  <div class="providing-section-container d-flex flex-column justify-content-center col-12">
+    <p class="providing-section-content">{{ introParagraphs[0] }}</p>
+    <p class="providing-section-title" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+      {{ introTitle }}
+    </p>
+    <p class="providing-section-content">{{ introParagraphs[1] }}</p>
+  </div>
+</section>
+
+@for (member of teamMembers; track member.name; let i = $index) {
+@if (i % 2 === 0) {
+<section class="container pb-5 providing-section mx-auto common-section-top-spacing">
+  <div class="row flex-column-reverse flex-lg-row ">
+    <div class="col-12 col-lg-6 image-wrapper fs_Start" data-aos="fade-left" data-aos-duration="800"
+      data-aos-delay="200">
+      <img class="main-img " [src]="member.image" [alt]="member.name" />
+    </div>
+    <div class="col-12 col-lg-6 d-flex pe-md-2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+      <div class="providing-section-container d-flex flex-column justify-content-center">
+        <p class="providing-section-title" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+          {{ member.name }}
+        </p>
+        @if (member.role) {
+        <p class="providing-section-content" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+          {{ member.role }}
+        </p>
+        }
+        <p class="providing-section-content light-blue pt-1 team-member-tagline">{{ member.tagline }}</p>
+        @for (paragraph of member.bio; track $index) {
+        <p class="providing-section-content">{{ paragraph }}</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+} @else {
+<section class="kms-approach-advisory bgColor">
+  <div class="row container flex-column-reverse flex-lg-row">
+    <div class="kms-approach-advisory-bg-content col-12 col-lg-6 col-6 common-title-description-content bgColor"
+      data-aos="fade-right" data-aos-duration="1000">
+      <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">{{ member.name }}</h4>
+      @if (member.role) {
+        <p class="providing-section-content" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+          {{ member.role }}
+        </p>
+      }
+      <p class="pt-1 team-member-tagline">{{ member.tagline }}</p>
+      @for (paragraph of member.bio; track $index) {
+      <p>{{ paragraph }}</p>
+      }
+    </div>
+    <div class="col-12 col-lg-6 kms-approach-advisory-img" data-aos="fade-left" data-aos-duration="1000"
+      data-aos-delay="300">
+      <img class="the-team-img" [src]="member.image" [alt]="member.name" />
+    </div>
+  </div>
+</section>
+}
+}

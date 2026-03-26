@@ -15,6 +15,10 @@ export const routes: Routes = [
         loadComponent: () => import('../app/components/about-us/about-us').then((m) => m.AboutUs),
       },
       {
+        path: 'the-team',
+        loadComponent: () => import('../app/components/the-team/the-team').then((m) => m.TheTeam),
+      },
+      {
         path: 'kms-approach',
         loadComponent: () =>
           import('../app/components/kms-approach/kms-approach').then((m) => m.KmsApproach),
@@ -35,7 +39,7 @@ export const routes: Routes = [
         loadComponent:() => import('../app/components/kms-expertise/value-maximization-and-monetization/value-maximization-and-monetization').then((m) => m.ValueMaximizationAndMonetization)
       },
       {
-        path:'kms-expertise/business-succession',
+        path:'kms-expertise/succession',
         loadComponent:() => import('../app/components/kms-expertise/business-succession/business-succession').then((m) => m.BusinessSuccession)
       },
       {

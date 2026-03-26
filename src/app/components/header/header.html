@@ -37,6 +37,7 @@
               >ABOUT US</a
             >
           </li>
+         
           <li class="nav-item">
             <a
               routerLinkActive="active"
@@ -80,6 +81,15 @@
               </li>
               }
             </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              routerLinkActive="active"
+              (click)="handleRouterChange()"
+              routerLink="/the-team"
+              class="nav-link"
+              >THE TEAM</a
+            >
           </li>
 
           <li class="nav-item"><a routerLinkActive="active" (click)="handleRouterChange()" routerLink="/industries" class="nav-link">INDUSTRIES</a></li>
@@ -134,6 +144,17 @@
         title="KMS Approach"
       >
         <mat-icon>trending_up</mat-icon>
+      </a>
+    </li>
+    <li class="mobile-nav-item">
+      <a
+        routerLinkActive="active"
+        (click)="handleRouterChange()"
+        routerLink="/the-team"
+        class="mobile-nav-link"
+        title="The Team"
+      >
+        <mat-icon>groups</mat-icon>
       </a>
     </li>
     <li class="mobile-nav-item">

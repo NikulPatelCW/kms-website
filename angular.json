@@ -24,17 +24,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "api",
+                "output": "api"
               }
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            },
-            "prerender": false
+            ]
           },
           "configurations": {
             "production": {
@@ -78,7 +77,13 @@
               "outputMode": "static",
               "server": false,
               "ssr": false,
-              "prerender": false
+              "prerender": false,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.github.ts"
+                }
+              ]
             },
             "development": {
               "optimization": false,
@@ -90,6 +95,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "kms-website:build:production"

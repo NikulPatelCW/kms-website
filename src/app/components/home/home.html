@@ -46,7 +46,7 @@
         class="providing-section-content"
         
       >
-        Knowledge Management Solutions (KMS) is an advisory and consulting organization with an
+        KMS is an advisory and consulting organization with an
         enriching experience of 40 years. We have been successful in integrating this legacy into a
         wide range of exceptionally skilled offerings that have left a lasting impression on our
         clientele.
@@ -92,90 +92,104 @@
     data-aos-duration="1000"
     data-aos-delay="300"
   >
-    <img class="main-img" src="assets/images/home-providing.jpg" />
+    <img class="main-img" src="assets/images/home-providing.png" />
   </div>
 </section>
-<section class="home-process-section common-section-top-spacing">
-  <div class="container overflow-x-hidden">
-    <div class="common-section-title text-center" data-aos="fade-down" data-aos-duration="1000">
-      <h3>THE PROCESS</h3>
-      <p>Positioning businesses to achieve success</p>
-    </div>
-    <div class="home-process-content">
-      @for (item of processData; track $index) {
-      <div
-        class="home-process-content-card"
-        [attr.data-aos]="$index % 2 === 0 ? 'fade-left' : 'fade-right'"
-        data-aos-duration="800"
-        [attr.data-aos-delay]="$index * 200"
-      >
-        <h4>{{ item?.title }}</h4>
-        <div class="separator"></div>
-        <ul>
-          @for (subItem of item?.details; track $index) {
-          <li>{{ subItem }}</li>
-          }
-        </ul>
-      </div>
-      }
-    </div>
-  </div>
-</section>
-<section class="home-know-kms-section overflow-hidden">
-  <div class="">
-    <div class="common-section-title" data-aos="fade-up" data-aos-duration="1000">
-      <h3 class="text-center">KNOW KMS</h3>
-    </div>
-    <div
-      class="kms-scroll-container"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-      data-aos-delay="300"
-    >
-      @if (showLeftArrow) {<button
-        mat-icon-button
-        class="kms-scroll-btn left"
-        (click)="scroll('left')"
-      >
-        <mat-icon>arrow_back</mat-icon></button
-      >}
-
-      <div class="home-know-kms-content" #scrollContainer (scroll)="onScroll()">
-        @for (item of knowKMSData; track $index) {
-        <div
-          class="home-know-kms-content-card"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          [attr.data-aos-delay]="$index * 200"
+<!-- evolution-section -->
+<section class="evolution-section">
+  <h3 class="evolution-section-title" data-aos="fade-down" data-aos-duration="1000">
+    Evolution In 45 Years
+  </h3>
+  <div class="evolution-carousel">
+    <div class="evolution-group">
+      <div class="custom-scroll timeline-wrapper">
+        <div class="timeline-wrapper-before"></div>
+        <p-timeline
+          [value]="processData"
+          [layout]="isMobile ? 'vertical' : 'horizontal'"
+          [align]="isMobile ? 'left' : 'alternate'"
+          class="custom-timeline"
         >
-          <h4
-            data-aos="fade-right"
-            data-aos-duration="600"
-            [attr.data-aos-delay]="$index * 200 + 300"
-          >
-            {{ item.title }}
-          </h4>
-          <ul>
-            @for (subItem of item?.details; track $index) {
-            <li
-              data-aos="fade-left"
-              data-aos-duration="500"
-              [attr.data-aos-delay]="$index * 100 + 500"
-            >
-              {{ subItem }}
-            </li>
-            }
-          </ul>
-        </div>
-        }
+          <ng-template let-item pTemplate="content">
+            <div class="about-us-timeline-content-card">
+              @if(item?.title){
+              <h4>{{ item?.title }}</h4>
+              <ul>
+                @for (point of item?.details; track $index) {
+                <li>{{ point }}</li>
+                }
+              </ul>
+              }
+            </div>
+          </ng-template>
+
+          <ng-template pTemplate="marker">
+            <span class="dot"></span>
+          </ng-template>
+
+          <ng-template pTemplate="opposite">
+            <span></span>
+          </ng-template>
+        </p-timeline>
+        <div class="timeline-wrapper-after"></div>
       </div>
-      @if (showRightArrow) {<button
-        mat-icon-button
-        class="kms-scroll-btn right"
-        (click)="scroll('right')"
-      >
-        <mat-icon>arrow_forward</mat-icon></button
-      >}
+    </div>
+    <div class="evolution-group">
+      <div aria-hidden class="d-none d-lg-block custom-scroll timeline-wrapper">
+        <div class="timeline-wrapper-before"></div>
+        <p-timeline
+          [value]="processData"
+          [layout]="isMobile ? 'vertical' : 'horizontal'"
+          [align]="isMobile ? 'left' : 'alternate'"
+          class="custom-timeline"
+        >
+          <ng-template let-item pTemplate="content">
+            <div class="about-us-timeline-content-card">
+              @if(item?.title){
+              <h4>{{ item?.title }}</h4>
+              <ul>
+                @for (point of item?.details; track $index) {
+                <li>{{ point }}</li>
+                }
+              </ul>
+              }
+            </div>
+          </ng-template>
+
+          <ng-template pTemplate="marker">
+            <span class="dot"></span>
+          </ng-template>
+
+          <ng-template pTemplate="opposite">
+            <span></span>
+          </ng-template>
+        </p-timeline>
+        <div class="timeline-wrapper-after"></div>
+      </div>
     </div>
   </div>
+</section>
+<!-- about-kms-feature -->
+<section class="about-kms-feature mx-auto">
+  @for (item of kmsFeature; track $index) {
+  <div
+    class="about-kms-feature-card"
+    data-aos="fade-up"
+    data-aos-duration="800"
+    [attr.data-aos-delay]="$index * 200"
+  >
+    <img
+      [src]="item.imgUrl"
+      data-aos="zoom-in"
+      data-aos-duration="600"
+      [attr.data-aos-delay]="$index * 200 + 300"
+    />
+    <h5 data-aos="fade-right" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 500">
+      {{ item.title }}
+    </h5>
+    <p data-aos="fade-left" data-aos-duration="600" [attr.data-aos-delay]="$index * 200 + 700">
+      {{ item.description }}
+    </p>
+  </div>
+  }
 </section>

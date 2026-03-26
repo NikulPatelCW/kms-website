@@ -1,21 +1,32 @@
-import { Component, HostListener } from '@angular/core';
-import { SharedImports } from '../../shared/shared-imports';
-import { TimelineModule } from 'primeng/timeline';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { SharedImports } from '../../shared/shared-imports'
 
 @Component({
   selector: 'app-about-us',
-  imports: [SharedImports, TimelineModule],
+  imports: [SharedImports],
   templateUrl: './about-us.html',
   styleUrl: './about-us.scss',
 })
-export class AboutUs {
+export class AboutUs implements OnInit, AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
+
   headerBgPath = 'assets/images/about-us-hero-bg.jpg';
   headerImgStyle: any = { 'background-image': `url(${this.headerBgPath})` };
   isMobile = false;
+  showLeftArrow = false;
+  showRightArrow = true;
 
   @HostListener('window:resize')
   onResize() {
     this.checkMobile();
+    this.updateArrows();
   }
 
   ngOnInit() {
@@ -23,112 +34,131 @@ export class AboutUs {
     this.checkMobile();
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.centerFirstCard();
+      this.updateArrows();
+    });
+  }
+
   checkMobile() {
     this.isMobile = window.innerWidth <= 991;
   }
 
-  kmsFeature = [
+  knowKMSData: { title: string; details: string[] }[] = [
     {
-      imgUrl: 'assets/images/about/customer.svg',
-      title: 'Client centered',
-      description:
-        'We make it our business to understand what is important to our clients. Listening to client challenges is the foundation for creating and advising solutions that best suit the need. We skillfully combine our expertise and capabilities across diverse verticals to help reach your goals.',
-    },
-    {
-      imgUrl: 'assets/images/about/time-management.svg',
-      title: 'Power of integration',
-      description:
-        'We connect services, verticals, associations, and experience across different industries to generate solutions. Expertise from over 40+ years, people and associations worked with connect seamlessly to deliver the best and create strength from connections.',
-    },
-    {
-      imgUrl: 'assets/images/about/contract.svg',
-      title: 'Responsibility built-in',
-      description:
-        'Responsibility is built into everything we do. Doing the right thing for our clients and their business is fundamental to our legacy and long-term success. We act and advise as per the need of the hour, delivering positive and long-term change responsibly.',
-    },
-    {
-      imgUrl: 'assets/images/about/thumb-up.svg',
-      title: 'Collaborate to innovate',
-      description:
-        'Our extended associations and people act as one team. Bringing together our knowledge, skill, and expertise across all disciplines, sectors, and industries, we are able to unearth the true goal and actions needed to get your business to great heights.',
-    },
-  ];
-  processData: { title: string; details: string[] }[] = [
-    {
-      title: '1981-85',
+      title: 'A Robust Team',
       details: [
-        'Taxation Planning & Advisory',
-        'Strategic Advisory',
-        'Legal/Commercial Advisory',
-        'JV & Technology Transfer Relationships',
-        'Legal-commercial & Documentation',
-        'FEMA & Exchange Controls',
+        'More than 40 years of experience in corporate, family and promoter advisory and consultancy',
+        'Strong team of financial professionals',
+        'Results-driven advice to clients',
+        'Innovative and forward-thinking',
+        'Comprehensive solutions that suit client requirements',
       ],
     },
     {
-    title: '1985-90',
-    details: [
-      'Business Concepts, Projects & Implementation Advisory',
-      'Fund Raising, IPO, Private Equity Advisory',
-      'Transaction Advisory'
-    ]
-  },
-  {
-    title: '1990-95',
-    details: [
-      'Due Diligence',
-      'PE Investment Advisory',
-      'Public Offering',
-      'Structuring & Restructuring'
-    ]
-  },
-  {
-    title: '1995-2000',
-    details: [
-      'Telecom Infra & Power Project',
-      'Turnaround & Revival Advisory'
-    ]
-  },
-  {
-    title: '2000-2005',
-    details: [
-      'Arbitration & Litigation Support',
-      'Cross-border Business Expansion'
-    ]
-  },
-  {
-    title: '2005-2010',
-    details: [
-      'Business Strategic Advisory',
-      'SEZ & Industrial Parks',
-      'Corporate Governance',
-      'Functional & Process Evaluation'
-    ]
-  },
-  {
-    title: '2010-2015',
-    details: [
-      'Microfinance, Venture Funds, AIF, Investment & Structuring Advisory'
-    ]
-  },
-  {
-    title: '2015-2020',
-    details: [
-      'Succession Planning & Management',
-      'Family Offices',
-      'Technology Business Initiatives',
-      'Strategic Investments',
-      'Overseas Infra Projects'
-    ]
-  },
-  {
-    title: '2020-2022',
-    details: [
-      'Entrepreneur Mentoring & Support Services',
-      'Fintech Initiatives',
-      'Advanced Tech Initiatives'
-    ]
+      title: 'KMS Network & Connects',
+      details: [
+        'Advocates & Legal Practitioners',
+        'Chartered Accountants',
+        'Company Secretaries',
+        'Valuers',
+        'Investment Advisors',
+        'Investment Bankers',
+        'Tax Advisors/ Consultants',
+        'Technology Advisors and Developers',
+        'Trustees & Compliance officers',
+      ],
+    },
+    {
+      title: 'Consortium of Experts',
+      details: [
+        'Investment & wealth advisory and management, merchant banking, I banking & other finance functions',
+        'Overseas relationship',
+        'Due diligence',
+        'Taxation & transfer pricing',
+        'FEMA & Exchange regulations',
+        'Compliance & secretarial',
+      ],
+    },
+    {
+      title: 'Scientific Way of Working',
+      details: [
+        'Special fusion of business savvy and scientific expertise',
+        'Comprehend the nuances of organizational dynamics',
+        'Insights for well-informed business decisions',
+        'Identify blind spots and provide fresh perspective',
+        'Research-based client solutions',
+      ],
+    },
+    {
+      title: 'Comprehensive Services',
+      details: [
+        'Comprehensive suite of advisory services - structuring, legal-commercial, taxation, succession etc',
+        'Tailor-made solutions as per client needs'
+      ],
+    },
+    {
+      title: 'Specific Services',
+      details: [
+        'A gamut of standalone services',
+        'Addresses the needs of businesses and families'
+      ],
+    },
+    {
+      title: 'Agile Transformation',
+      details: [
+        'A strategy-driven approach',
+        'Promotes progress while delivering tangible results',
+        'Defining objective and developing implementation strategy',
+        'Research based finding and applications',
+        'Transformative and future-ready solutions',
+      ],
+    },
+  ];
+
+  centerFirstCard() {
+    const el = this.scrollContainer?.nativeElement;
+    if (!el) return;
+    const firstCard = el.querySelector('.home-know-kms-content-card') as HTMLElement;
+    if (!firstCard) return;
+
+    const scrollTo = firstCard.offsetLeft - (el.clientWidth - firstCard.offsetWidth) / 2;
+    el.scrollLeft = scrollTo;
   }
-    
+
+  onScroll() {
+    this.updateArrows();
+  }
+
+  updateArrows() {
+    const el = this.scrollContainer?.nativeElement;
+    if (!el) return;
+    this.showLeftArrow = el.scrollLeft > 0;
+    this.showRightArrow = el.scrollLeft + el.clientWidth < el.scrollWidth - 5;
+  }
+
+  scroll(direction: 'left' | 'right') {
+    const el = this.scrollContainer.nativeElement;
+    const scrollAmount = el.clientWidth * 0.8;
+    el.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+  }
+  processData: { title: string; details: string[] }[] = [
+    {
+      title: 'Discovery',
+      details: ['Business, financial checks', 'Lega-commercial, taxation checks'],
+    },
+    {
+      title: 'Advisory & Solution',
+      details: ['Value-added solutions', 'Strategy to Create Value and Alignment'],
+    },
+    {
+      title: 'Implementation',
+      details: ['Systematic planning', 'Management strategies'],
+    },
+    // {
+    //   title: 'Review & Monitoring',
+    //   details: ['Performance evaluation', 'Review objectives and actions meeting expectations'],
+    // },
   ];
 }
