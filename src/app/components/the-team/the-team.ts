@@ -30,7 +30,7 @@ export class TheTeam implements OnInit {
   teamMembers: TeamMember[] | any = [
     {
       name: 'Mr. Vinod Modha',
-      role: 'Senior Partner',
+      // role: 'Senior Partner',
       tagline: 'Strategic advisor to Families & Businesses on governance, growth, and legacy.',
       bio: [
         'Mr. Vinod Modha is a Chartered Accountant with 45+ years of experience in strategic advisory, legal commercial documentation, and succession planning. Having served on the boards of several companies, he now acts as a strategic advisor to promoters and mid- & large-scale enterprises.',
@@ -59,7 +59,7 @@ export class TheTeam implements OnInit {
     },
     {
       name: 'Jaimin Chohan',
-      tagline: 'Strategic operations leader specializing in governance, compliance, and process optimization.Strategic operations leader specializing in governance, compliance, and process optimization.',
+      tagline: 'Strategic operations leader specializing in governance, compliance, and process optimization.',
         bio: [
           'Jaimin Chohan is a strategic operations and analytics leader with 20+ years of experience in governance, compliance, and process excellence. He brings advanced capabilities in data analytics, SAP data interpretation, system optimisation, and reporting frameworks that support due diligence, financial projections, and statutory compliance. Jaimin also plays a key role in wealth and investment analytics, assisting leadership teams and promoters in capital allocation, investment performance tracking, and monetisation strategies.',
           'His academic background in commerce, software engineering, and electronic data processing underpins a structured, technology-driven approach to delivering scalable, insight-led business solutions.'

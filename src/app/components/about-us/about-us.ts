@@ -146,15 +146,15 @@ export class AboutUs implements OnInit, AfterViewInit {
   processData: { title: string; details: string[] }[] = [
     {
       title: 'Discovery',
-      details: ['Business, financial checks', 'Lega-commercial, taxation checks'],
+      details: ['Business, financial checks', 'Legal-commercial, taxation checks'],
     },
     {
       title: 'Advisory & Solution',
       details: ['Value-added solutions', 'Strategy to Create Value and Alignment'],
     },
     {
-      title: 'Implementation',
-      details: ['Systematic planning', 'Management strategies'],
+      title: 'Implementation Strategies',
+      details: ['Planning & Management', 'Positive Outcome'],
     },
     // {
     //   title: 'Review & Monitoring',

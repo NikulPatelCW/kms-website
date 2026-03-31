@@ -9,7 +9,7 @@ import { CommonImgAndContent } from '../../../shared/components/common-img-and-c
 })
 export class MultinationalOverseasStructuring {
   headerBg = 'assets/images/expertise/tech.jpg';
-  headerTitle = 'Multinational / Overseas Structuring';
+  headerTitle = 'Multinational / Overseas Positioning';
   headerSubTitle = 'Home - KMS Expertise';
   sections = {
     title: '',
