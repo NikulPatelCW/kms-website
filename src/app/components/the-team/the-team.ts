@@ -24,7 +24,7 @@ export class TheTeam implements OnInit {
   introTitle = 'Who We Are?';
   introParagraphs = [
     'At KMS Strategic Advisors Pvt Ltd, our strength lies in our people - a diverse and dynamic group of professionals united by a shared commitment to excellence, strategic thinking, and entrepreneurial spirit. With decades of collective experience across industries and functions, our team brings deep expertise, practical problem-solving skills, and client-first dedication to every engagement.',
-    'We are a multidisciplinary team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
+    'We are a team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
   ];
 
   teamMembers: TeamMember[] | any = [
@@ -39,7 +39,7 @@ export class TheTeam implements OnInit {
       image: 'assets/images/team/vinodModha_img.png',
     },
     {
-      name: 'Rounak Jain',
+      name: 'Mr. Rounak Jain',
       tagline: 'Advisor to Businesses and families on financial structuring, analysis, and succession.',
       bio: [
         'Rounak Jain is a Chartered Accountant and Senior Advisor with 8+ years of experience, , specialising in advisory services for promoter-led businesses and family enterprises. He works across business and financial structuring, restructuring, finance function strengthening, decision-support analysis, and succession planning, complemented by ongoing financial and investment monitoring.',
@@ -48,7 +48,7 @@ export class TheTeam implements OnInit {
       image: 'assets/images/team/rounakJain_img.png',
     },
     {
-      name: 'Bhavya Shah',
+      name: 'Mr. Bhavya Shah',
       tagline:
         'Legal and corporate advisor specializing in commercial documentation, family office, IP strategy, and succession frameworks.',
       bio: [
@@ -58,7 +58,7 @@ export class TheTeam implements OnInit {
       image: 'assets/images/team/bhavyaShah_img.png',
     },
     {
-      name: 'Jaimin Chohan',
+      name: 'Mr. Jaimin Chohan',
       tagline: 'Strategic operations leader specializing in governance, compliance, and process optimization.',
         bio: [
           'Jaimin Chohan is a strategic operations and analytics leader with 20+ years of experience in governance, compliance, and process excellence. He brings advanced capabilities in data analytics, SAP data interpretation, system optimisation, and reporting frameworks that support due diligence, financial projections, and statutory compliance. Jaimin also plays a key role in wealth and investment analytics, assisting leadership teams and promoters in capital allocation, investment performance tracking, and monetisation strategies.',

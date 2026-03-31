@@ -110,7 +110,7 @@ export class Home implements OnInit, AfterViewInit {
       imgUrl: 'assets/images/about/time-management.svg',
       title: 'Power of integration',
       description:
-        'We connect services, verticals, associations, and experience across different industries to generate solutions. Expertise from over 40+ years, people and associations worked with connect seamlessly to deliver the best and create strength from connections.',
+        'We connect services, verticals, associations, and experience across different industries to generate solutions. Expertise from over 45 years, people and associations worked with connect seamlessly to deliver the best and create strength from connections.',
     },
     {
       imgUrl: 'assets/images/about/contract.svg',

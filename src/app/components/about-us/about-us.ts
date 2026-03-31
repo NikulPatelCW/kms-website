@@ -49,7 +49,7 @@ export class AboutUs implements OnInit, AfterViewInit {
     {
       title: 'A Robust Team',
       details: [
-        'More than 40 years of experience in corporate, family and promoter advisory and consultancy',
+        'More than 45 years of experience in corporate, family and promoter advisory and consultancy',
         'Strong team of financial professionals',
         'Results-driven advice to clients',
         'Innovative and forward-thinking',

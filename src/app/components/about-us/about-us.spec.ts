@@ -70,7 +70,7 @@ describe('AboutUs', () => {
 
   it('should render timeline section with correct title', () => {
     const timelineTitle = fixture.debugElement.query(By.css('.evolution-section-title'));
-    expect(timelineTitle.nativeElement.textContent.trim()).toBe('Evolution In 40 Years');
+    expect(timelineTitle.nativeElement.textContent.trim()).toBe('Evolution In 45 Years');
   });
 
   it('should render team section title', () => {
