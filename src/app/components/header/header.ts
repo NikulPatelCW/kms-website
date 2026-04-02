@@ -1,4 +1,5 @@
-import { Component, HostListener, inject, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { SharedImports } from '../../shared/shared-imports';
 import { Footer } from "../footer/footer";
 // import { NavigationEnd, Router } from '@angular/router';
@@ -14,6 +15,7 @@ import { CommonUtils } from '../../core/commonUtils';
 export class Header implements OnInit {
   // private router = inject(Router);
   private commonUtils = inject(CommonUtils);
+  private platformId = inject(PLATFORM_ID);
   isDropdownOpen = false;
   isHome = false;
   isSticky = false;
@@ -38,12 +40,20 @@ export class Header implements OnInit {
 
   @HostListener('window:scroll')
   onScroll() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     this.isSticky = window.scrollY > 40;
     this.updateScrollProgress();
   }
 
   @HostListener('window:resize')
   onResize() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     this.updateScrollProgress();
   }
 
@@ -52,6 +62,13 @@ export class Header implements OnInit {
   }
 
   private updateScrollProgress() {
+    if (!isPlatformBrowser(this.platformId)) {
+      this.scrollProgress = 0;
+      this.scrollProgressOffset = this.circleCircumference;
+      this.showScrollToTop = false;
+      return;
+    }
+
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;

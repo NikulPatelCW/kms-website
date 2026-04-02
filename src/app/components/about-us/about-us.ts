@@ -3,9 +3,12 @@ import {
   Component,
   ElementRef,
   HostListener,
+  Inject,
   OnInit,
+  PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { SharedImports } from '../../shared/shared-imports'
 
 @Component({
@@ -15,6 +18,8 @@ import { SharedImports } from '../../shared/shared-imports'
   styleUrl: './about-us.scss',
 })
 export class AboutUs implements OnInit, AfterViewInit {
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: Object) {}
+
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
 
   headerBgPath = 'assets/images/about-us-hero-bg.jpg';
@@ -35,6 +40,10 @@ export class AboutUs implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     setTimeout(() => {
       this.centerFirstCard();
       this.updateArrows();
@@ -42,6 +51,10 @@ export class AboutUs implements OnInit, AfterViewInit {
   }
 
   checkMobile() {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     this.isMobile = window.innerWidth <= 991;
   }
 

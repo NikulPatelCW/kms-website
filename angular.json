@@ -18,6 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "server": "src/main.server.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -53,7 +54,12 @@
               "allowedCommonJsDependencies": [
                 "aos"
               ],
-              "outputPath": "dist/kms-website"
+              "outputPath": "dist/kms-website",
+              "outputMode": "server",
+              "ssr": {
+                "entry": "src/server.ts"
+              },
+              "prerender": true
             },
             "github": {
               "budgets": [
@@ -75,20 +81,26 @@
               "outputPath": "dist/kms-website",
               "baseHref": "/kms-website/",
               "outputMode": "static",
-              "server": false,
-              "ssr": false,
-              "prerender": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.github.ts"
+                },
+                {
+                  "replace": "src/app/app.routes.server.ts",
+                  "with": "src/app/app.routes.server.github.ts"
                 }
               ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,              
+              "outputMode": "server",
+              "ssr": {
+                "entry": "src/server.ts"
+              },
+              "prerender": true
             }
           },
           "defaultConfiguration": "production"

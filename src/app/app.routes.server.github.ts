@@ -3,38 +3,38 @@ import { RenderMode, ServerRoute } from '@angular/ssr';
 export const serverRoutes: ServerRoute[] = [
   {
     path: '',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'home',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'about',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'the-team',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'kms-approach',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'kms-expertise/**',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'industries',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: 'contact-us',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
   },
   {
     path: '**',
-    renderMode: RenderMode.Client
-  }
+    renderMode: RenderMode.Client,
+  },
 ];
