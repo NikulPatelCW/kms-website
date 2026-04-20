@@ -81,6 +81,11 @@ export const routes: Routes = [
           import('../app/components/contact-us/contact-us').then((m) => m.ContactUs),
       },
       {
+        path: 'career',
+        loadComponent: () =>
+          import('../app/components/career/career').then((m) => m.Career),
+      },
+      {
         path: '**',
        redirectTo: 'home',
       },
