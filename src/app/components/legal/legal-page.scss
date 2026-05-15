@@ -1,0 +1,135 @@
+.legal-hero-title {
+  h3,
+  p {
+    opacity: 1;
+    animation: legalHeroFadeIn 0.9s ease-out both;
+  }
+
+  p {
+    animation-delay: 0.15s;
+  }
+}
+
+@keyframes legalHeroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.legal-page-section {
+  width: 100%;
+  max-width: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.legal-last-updated {
+  color: var(--muted-text);
+  font-size: var(--fs-sub-title);
+  margin-bottom: 24px;
+}
+
+.legal-intro {
+  color: var(--muted-text);
+  font-size: var(--fs-sub-title);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.legal-section {
+  margin-bottom: 32px;
+  opacity: 1 !important;
+  transform: none !important;
+
+  h4 {
+    font-size: var(--fs-custom-24, 1.25rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: var(--muted-text);
+    font-size: var(--fs-sub-title);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+}
+
+.legal-list {
+  list-style: none !important;
+  margin: 0 0 12px;
+  padding: 0 !important;
+
+  .legal-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 0 0 10px;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .legal-list-bullet {
+    flex: 0 0 8px;
+    width: 8px;
+    height: 8px;
+    margin-top: 11px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+  }
+
+  .legal-list-text {
+    flex: 1;
+    min-width: 0;
+    color: var(--muted-text);
+    font-size: var(--fs-sub-title);
+    line-height: 1.7;
+  }
+}
+
+.legal-cookie-table {
+  margin: 16px 0 20px;
+
+  .table {
+    margin-bottom: 0;
+
+    th,
+    td {
+      font-size: var(--fs-sub-title);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--muted-text);
+    }
+  }
+}
+
+.legal-contact p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .legal-page-section {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}

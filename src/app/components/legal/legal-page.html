@@ -1,0 +1,63 @@
+@if (document) {
+<section class="common-hero-container" [ngStyle]="headerImgStyle">
+  <div class="common-hero-section container">
+    <div class="separator"></div>
+    <div class="common-hero-section-title legal-hero-title">
+      <h3>{{ document.title }}</h3>
+      <p>{{ document.breadcrumb }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="container common-max-width mx-auto legal-page-section">
+  <p class="legal-last-updated">Last Updated: {{ document.lastUpdated }}</p>
+
+  @for (paragraph of document.intro; track paragraph) {
+  <p class="legal-intro">{{ paragraph }}</p>
+  }
+
+  @for (section of document.sections; track section.title + $index) {
+  <article class="legal-section">
+    @if (section.title) {
+    <h4>{{ section.title }}</h4>
+    }
+
+    @for (block of section.blocks; track $index) {
+    @if (block.text) {
+    <p>{{ block.text }}</p>
+    }
+    @if (block.items?.length) {
+    <ul class="legal-list">
+      @for (item of block.items; track item) {
+      <li class="legal-list-item">
+        <span class="legal-list-bullet" aria-hidden="true"></span>
+        <span class="legal-list-text">{{ item }}</span>
+      </li>
+      }
+    </ul>
+    }
+    @if (block.rows?.length) {
+    <div class="table-responsive legal-cookie-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of block.rows; track row.type) {
+          <tr>
+            <td>{{ row.type }}</td>
+            <td>{{ row.purpose }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    }
+    }
+  </article>
+  }
+</section>
+}

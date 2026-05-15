@@ -34,6 +34,26 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Server
   },
   {
+    path: 'career',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'privacy-policy',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'disclaimer',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'cookie-policy',
+    renderMode: RenderMode.Server
+  },
+  {
+    path: 'terms-of-use',
+    renderMode: RenderMode.Server
+  },
+  {
     path: '**',
     renderMode: RenderMode.Client
   }

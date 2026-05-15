@@ -86,6 +86,30 @@ export const routes: Routes = [
           import('../app/components/career/career').then((m) => m.Career),
       },
       {
+        path: 'privacy-policy',
+        loadComponent: () =>
+          import('../app/components/legal/legal-page').then((m) => m.LegalPage),
+        data: { legalKey: 'privacy-policy' },
+      },
+      {
+        path: 'disclaimer',
+        loadComponent: () =>
+          import('../app/components/legal/legal-page').then((m) => m.LegalPage),
+        data: { legalKey: 'disclaimer' },
+      },
+      {
+        path: 'cookie-policy',
+        loadComponent: () =>
+          import('../app/components/legal/legal-page').then((m) => m.LegalPage),
+        data: { legalKey: 'cookie-policy' },
+      },
+      {
+        path: 'terms-of-use',
+        loadComponent: () =>
+          import('../app/components/legal/legal-page').then((m) => m.LegalPage),
+        data: { legalKey: 'terms-of-use' },
+      },
+      {
         path: '**',
        redirectTo: 'home',
       },
