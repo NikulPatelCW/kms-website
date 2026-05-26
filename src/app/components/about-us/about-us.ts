@@ -159,7 +159,7 @@ export class AboutUs implements OnInit, AfterViewInit {
   processData: { title: string; details: string[] }[] = [
     {
       title: 'Discovery',
-      details: ['Business, financial checks', 'Legal-commercial, taxation checks'],
+      details: ['Financial, taxation health check', 'Legal-commercial checks'],
     },
     {
       title: 'Advisory & Solution',
@@ -167,7 +167,7 @@ export class AboutUs implements OnInit, AfterViewInit {
     },
     {
       title: 'Implementation Strategies',
-      details: ['Planning & Management', 'Positive Outcome'],
+      details: ['Systematic planning', 'Management strategies'],
     },
     // {
     //   title: 'Review & Monitoring',

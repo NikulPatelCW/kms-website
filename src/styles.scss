@@ -454,10 +454,30 @@ main {
     }
   }
   ul {
-    margin-left: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
     li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: var(--fs-sub-title);
       color: var(--muted-text);
+      padding-bottom: 8px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+      }
     }
   }
 }
@@ -1173,8 +1193,8 @@ li {
 
 ul li {
   &::marker {
-    color: var(--primary-color); /* Sets the color of the bullet point */
-    font-size: 30px; /* Sets the size of the bullet point */
+    color: var(--primary-color);
+    font-size: 0.5em;
   }
 }
 
@@ -1229,6 +1249,7 @@ ul li {
   .image-wrapper {
     justify-content: center;
     height: auto;
+    padding-top: 2.5rem;
     .main-img {
       max-width: auto;
     }
@@ -1246,13 +1267,25 @@ ul li {
     }
   }
   .kms-approach-advisory {
+    margin-bottom: 40px;
     &::before {
       content: none;
     }
     .kms-approach-advisory-img {
       justify-content: center;
+      padding-top: 2.5rem;
       padding-bottom: 20px;
+      height: auto;
+      .main-img,
+      .the-team-img {
+        position: relative;
+        max-width: 100%;
+      }
     }
+  }
+  .image-wrapper .the-team-img {
+    position: relative;
+    max-width: 100%;
   }
   .kms-expertise-common-section .kms-expertise-img {
     justify-content: center;

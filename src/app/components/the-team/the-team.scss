@@ -9,3 +9,9 @@
   color: var(--theme-white);
   opacity: 0.95;
 }
+
+@media (min-width: 992px) {
+  .kms-approach-advisory .kms-approach-advisory-img .the-team-img.team-member-img--constrained {
+    max-width: 95%;
+  }
+}

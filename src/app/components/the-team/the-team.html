@@ -46,8 +46,8 @@
 </section>
 } @else {
 <section class="kms-approach-advisory bgColor">
-  <div class="row container flex-column-reverse flex-lg-row">
-    <div class="kms-approach-advisory-bg-content col-12 col-lg-6 col-6 common-title-description-content bgColor"
+  <div class="row container flex-column flex-lg-row">
+    <div class="kms-approach-advisory-bg-content col-12 col-lg-6 common-title-description-content bgColor"
       data-aos="fade-right" data-aos-duration="1000">
       <h4 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">{{ member.name }}</h4>
       @if (member.role) {
@@ -62,7 +62,12 @@
     </div>
     <div class="col-12 col-lg-6 kms-approach-advisory-img" data-aos="fade-left" data-aos-duration="1000"
       data-aos-delay="300">
-      <img class="the-team-img" [src]="member.image" [alt]="member.name" />
+      <img
+        class="the-team-img"
+        [class.team-member-img--constrained]="member.constrainDesktopImage"
+        [src]="member.image"
+        [alt]="member.name"
+      />
     </div>
   </div>
 </section>

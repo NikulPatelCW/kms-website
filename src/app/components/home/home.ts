@@ -54,25 +54,25 @@ export class Home implements OnInit, AfterViewInit {
     {
       title: '1981-85',
       details: [
-        'Taxation Planning & Advisory',
-        'Strategic Advisory',
+        'Taxation & Estate Duty Planning & Advisory',
+        'Corporate Advisory',
         'Legal/Commercial Advisory',
-        'JV & Technology Transfer Relationships',
-        'Legal-commercial & Documentation',
-        'FEMA & Exchange Controls',
+        'Documentation',
+        'JV & Technology Transfer Relationship',
       ],
     },
     {
       title: '1985-90',
       details: [
+        'Legal-Commercial & Transactional Documentation',
         'Business Concepts, Projects & Implementation Advisory',
-        'Fund Raising, IPO, Private Equity Advisory',
-        'Transaction Advisory',
+        'Transaction AdvisoryFund Raising, IPO, Private Equity Advisory',
+        'FERA & Exchange Controls',
       ],
     },
     {
       title: '1990-95',
-      details: ['Due Diligence', 'PE Investment Advisory', 'Public Offering', 'Structuring & Restructuring'],
+      details: ['Venture Fund Advisory', 'Due Diligence', 'Public Offering', 'Structuring & Restructuring'],
     },
     {
       title: '1995-2000',
@@ -80,7 +80,7 @@ export class Home implements OnInit, AfterViewInit {
     },
     {
       title: '2000-2005',
-      details: ['Arbitration & Litigation Support', 'Cross-border Business Expansion'],
+      details: ['Arbitration & Litigation Support', 'Cross Border Business Expansion'],
     },
     {
       title: '2005-2010',
@@ -88,15 +88,27 @@ export class Home implements OnInit, AfterViewInit {
     },
     {
       title: '2010-2015',
-      details: ['Microfinance, Venture Funds, AIF, Investment & Structuring Advisory'],
+      details: [
+        'Microfinance, Venture Funds, AIF, Investment & Structuring Advisory',
+        'Overseas Infra Projects',
+      ],
     },
     {
       title: '2015-2020',
-      details: ['Succession Planning & Management', 'Family Offices', 'Technology Business Initiatives', 'Strategic Investments', 'Overseas Infra Projects'],
+      details: [
+        'Succession Planning & Management',
+        'Family Office',
+        'Strategic Investment',
+        'Fintech Initiatives',
+      ],
     },
     {
-      title: '2020-2022',
-      details: ['Entrepreneur Mentoring & Support Services', 'Fintech Initiatives', 'Advanced Tech Initiatives'],
+      title: '2020-2025',
+      details: [
+        'Entrepreneur Mentoring & Support Services',
+        'Greentech Businesses',
+        'Advanced Tech Initiatives',
+      ],
     },
   ];
   kmsFeature = [
@@ -110,7 +122,7 @@ export class Home implements OnInit, AfterViewInit {
       imgUrl: 'assets/images/about/time-management.svg',
       title: 'Power of integration',
       description:
-        'We connect services, verticals, associations, and experience across different industries to generate solutions. Expertise from over 45 years, people and associations worked with connect seamlessly to deliver the best and create strength from connections.',
+        'We connect services, verticals, associations, and expertise across diverse industries to deliver innovative advisory and solutions. Backed by over 45+ years of expertise, our people and network of partnerships that connect seamlessly to deliver the best solutions and create strength through collaborations.',
     },
     {
       imgUrl: 'assets/images/about/contract.svg',
