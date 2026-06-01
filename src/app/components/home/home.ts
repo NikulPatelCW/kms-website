@@ -66,7 +66,7 @@ export class Home implements OnInit, AfterViewInit {
       details: [
         'Legal-Commercial & Transactional Documentation',
         'Business Concepts, Projects & Implementation Advisory',
-        'Transaction AdvisoryFund Raising, IPO, Private Equity Advisory',
+        'Fund Raising, IPO, Private Equity Advisory',
         'FERA & Exchange Controls',
       ],
     },
@@ -103,7 +103,7 @@ export class Home implements OnInit, AfterViewInit {
       ],
     },
     {
-      title: '2020-2025',
+      title: '2020-2026',
       details: [
         'Entrepreneur Mentoring & Support Services',
         'Greentech Businesses',

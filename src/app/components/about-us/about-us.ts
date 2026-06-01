@@ -163,7 +163,7 @@ export class AboutUs implements OnInit, AfterViewInit {
     },
     {
       title: 'Advisory & Solution',
-      details: ['Value-added solutions', 'Strategy to Create Value and Alignment'],
+      details: ['Strategy to Create Value and Alignment'],
     },
     {
       title: 'Implementation Strategies',

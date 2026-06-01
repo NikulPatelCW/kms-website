@@ -72,10 +72,12 @@ export class TheTeam implements OnInit {
       name: 'Jaimin Chohan',
       tagline: 'Strategic operations leader specializing in governance, compliance, and process optimization.',
         bio: [
-          'Jaimin Chohan is a strategic operations and analytics leader with 20+ years of experience in governance, compliance, and process excellence. He brings advanced capabilities in data analytics, SAP data interpretation, system optimisation, and reporting frameworks that support due diligence, financial projections, and statutory compliance. Jaimin also plays a key role in wealth and investment analytics, assisting leadership teams and promoters in capital allocation, investment performance tracking, and monetisation strategies.',
-          'His academic background in commerce, software engineering, and electronic data processing underpins a structured, technology-driven approach to delivering scalable, insight-led business solutions.'
+          'Jaimin Chohan is a seasoned strategic operations and analytics leader with over 20 years of experience in driving governance, compliance, and process excellence across organizations. He specializes in strengthening functional and system performance, enabling businesses to enhance operational efficiency and make informed, high-impact decisions.',
+          'With a deep understanding of organizational frameworks, Jaimin ensures that business processes are not only efficient but also resilient and scalable. His expertise lies in leveraging data as a strategic asset - bridging the gap between complex datasets and executive decision-making to unlock measurable business value.',
+          'He brings advanced capabilities in data analytics, system optimization, and SAP data interpretation, enabling the design of robust data collection frameworks and insightful reporting structures. His work supports critical areas such as due diligence, financial projections, and statutory compliance, while also driving cost optimization and operational refinement.','Jaimin plays a pivotal role in wealth and investment analytics, with a strong focus on evaluation of investment and divestment opportunities and value realisation strategies. He supports leadership teams and promoters in assessing capital allocation decisions, tracking investment performance, and identifying opportunities for strategic realignment and monetisation.','Backed by academic qualifications in commerce, software engineering, and electronic data processing, he brings a structured, technology-driven, and practical approach to advisory - delivering insight-led, scalable, and outcome-oriented business solutions.'
         ],
       image: 'assets/images/team/jaiminChohan_img.png',
+      constrainDesktopImage: true,
     },
   ];
 
