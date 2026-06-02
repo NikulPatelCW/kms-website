@@ -86,7 +86,7 @@ export class AboutUs implements OnInit, AfterViewInit {
     {
       title: 'Consortium of Experts',
       details: [
-        'Investment & wealth advisory and management, merchant banking, I banking & other finance functions',
+        'Investment & wealth advisory and management, merchant banking, I\u00A0banking & other finance functions',
         'Overseas relationship',
         'Due diligence',
         'Taxation & transfer pricing',
