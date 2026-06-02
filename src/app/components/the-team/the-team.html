@@ -18,6 +18,10 @@
   </div>
 </section>
 
+<p class="container providing-section-title" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+  {{ teamTitle }}
+</p>
+
 @for (member of teamMembers; track member.name; let i = $index) {
 @if (i % 2 === 0) {
 <section class="container pb-5 providing-section mx-auto common-section-top-spacing">

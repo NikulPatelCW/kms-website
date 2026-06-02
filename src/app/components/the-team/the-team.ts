@@ -24,9 +24,10 @@ export class TheTeam implements OnInit {
   };
 
   introTitle = 'Who We Are?';
+  teamTitle = 'The Minds Behind KMS';
   introParagraphs = [
     'At KMS Strategic Advisors Pvt Ltd, our strength lies in our people - a diverse and dynamic group of professionals united by a shared commitment to excellence, strategic thinking, and entrepreneurial spirit. With decades of collective experience across industries and functions, our team brings deep expertise, practical problem-solving skills, and client-first dedication to every engagement.',
-    'We are a team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
+    'We are a multidisciplinary team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
   ];
 
   teamMembers: TeamMember[] | any = [
@@ -35,7 +36,7 @@ export class TheTeam implements OnInit {
       // role: 'Senior Partner',
       tagline: 'Strategic advisor to Families & Businesses on governance, growth, and legacy.',
       bio: [
-        'Mr Vinod Modha, a Chartered Accountant by profession with a rich professional experience of 45+ years in Strategic Advisory, Legal commercial Documentation and Succession Planning, brings a refined and pragmatic approach to Corporates and families for advisory and consultancy. With rich and extensive experience working with corporates and promoters, he has served on the boards of several companies before assuming the role of a strategic advisor to promoters of mid- and large-scale enterprises.',
+        'Mr Vinod Modha, a Chartered Accountant by profession with a rich professional experience of 45+ years in Strategic Advisory, Legal Commercial Documentation and Succession Planning, brings a refined and pragmatic approach to corporates and families for advisory and consultancy. With rich and extensive experience working with corporates and promoters, he has served on the boards of several companies before assuming the role of a strategic advisor to promoters of mid- and large-scale enterprises.',
         'He has built and leads a handpicked team of trained and experienced professionals with deep expertise in advisory, consulting, handholding, and implementation strategies. A shared commitment to excellence and client outcomes defines the team’s approach.',
         'Under his guidance, the KMS team has supported several organizations in successful business expansion initiatives, including multinational corporations. His work has been instrumental in delivering strategic advisory, structuring, succession planning, family office solutions, and allied advisory services to Promoter families.',
       ],
