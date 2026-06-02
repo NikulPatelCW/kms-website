@@ -107,7 +107,7 @@ export class Header implements OnInit {
     // { label: 'Financial Insights', routerLink: 'kms-expertise/financial-insights' },
     // { label: 'Inorganic Growth Strategies', routerLink: 'kms-expertise/inorganic-growth' },
     // { label: 'Tech & Disruptive Businesses', routerLink: 'kms-expertise/tech-businesses' },
-    { label: 'Multinational / Overseas Positioning', routerLink: 'kms-expertise/multinational' },
+    { label: 'Multinational / Overseas Structuring', routerLink: 'kms-expertise/multinational' },
     { label: 'Tax Efficiencies', routerLink: 'kms-expertise/tax-efficiencies' },
     { label: 'Legal - Commercial Advisory', routerLink: 'kms-expertise/legal-commercial' },
   ];
