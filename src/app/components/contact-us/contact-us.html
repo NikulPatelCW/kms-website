@@ -1,11 +1,11 @@
 <section class="common-hero-container" [ngStyle]="headerImgStyle">
   <div class="common-hero-section container">
-  <div class="separator"></div>
-  <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
-    <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Contact Us</h3>
-    <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - Contact Us</p>
+    <div class="separator"></div>
+    <div class="common-hero-section-title" data-aos="fade-up" data-aos-duration="1000">
+      <h3 data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Contact Us</h3>
+      <p data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Home - Contact Us</p>
+    </div>
   </div>
-</div>
 </section>
 <section class="container contact-us-form-section row">
   <div class="col-12 col-lg-7 contact-us-form-address-section" data-aos="fade-right" data-aos-duration="1000">
@@ -27,7 +27,7 @@
             <mat-icon>mail</mat-icon>
           </div>
           <p class="contact-us-content-card-title">Email address</p>
-          <p>info@kms-advisors.com</p>
+          <p><a href="mailto:info@kms-advisors.com">info@kms-advisors.com</a></p>
         </div>
         <div class="contact-us-content-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
           <div class="icon-wrapper">
@@ -35,8 +35,8 @@
           </div>
           <p class="contact-us-content-card-title">Phone:</p>
           <div class="d-flex flex-wrap gap-2">
-            <p>+91 79 26309540</p>
-            <p>+91 79 26309520</p>
+            <p><a href="tel:7926309540">+91 7926309540</a></p>
+            <p><a href="tel:7926309520">+91 7926309520</a></p>
           </div>
         </div>
       </div>
@@ -52,31 +52,15 @@
 
         <form [formGroup]="contactForm" (ngSubmit)="submit()">
           @if (alertSuccess) {
-          <div
-            class="alert alert-success alert-dismissible fade show mb-3"
-            role="alert"
-          >
+          <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
             {{ alertMessage }}
-            <button
-              type="button"
-              class="btn-close"
-              (click)="dismissSuccess()"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" (click)="dismissSuccess()" aria-label="Close"></button>
           </div>
           }
           @if (alertDanger) {
-          <div
-            class="alert alert-danger alert-dismissible fade show mb-3"
-            role="alert"
-          >
+          <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
             {{ alertMessage }}
-            <button
-              type="button"
-              class="btn-close"
-              (click)="dismissDanger()"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close" (click)="dismissDanger()" aria-label="Close"></button>
           </div>
           }
 
@@ -98,13 +82,7 @@
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Email</mat-label>
-            <input
-              matInput
-              type="email"
-              formControlName="email"
-              placeholder="Enter your email"
-              autocomplete="email"
-            />
+            <input matInput type="email" formControlName="email" placeholder="Enter your email" autocomplete="email" />
             @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
             <mat-error>
               @if (contactForm.get('email')?.hasError('required')) {
@@ -120,13 +98,8 @@
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Phone</mat-label>
-            <input
-              matInput
-              type="tel"
-              formControlName="phone"
-              placeholder="Enter your phone number"
-              autocomplete="tel"
-            />
+            <input matInput type="tel" formControlName="phone" placeholder="Enter your phone number"
+              autocomplete="tel" />
             @if (contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched) {
             <mat-error>
               @if (contactForm.get('phone')?.hasError('required')) {
@@ -142,15 +115,12 @@
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Message</mat-label>
-            <textarea
-              matInput
-              formControlName="message"
-              rows="4"
-              placeholder="How can we help you?"
-            ></textarea>
+            <textarea matInput formControlName="message" rows="4" placeholder="How can we help you?"></textarea>
             @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
             <mat-error>
-              @if (contactForm.get('message')?.hasError('maxlength')) {
+              @if (contactForm.get('message')?.hasError('required')) {
+              Message is required.
+              } @else if (contactForm.get('message')?.hasError('maxlength')) {
               Message is too long (max 5000 characters).
               } @else if (contactForm.get('message')?.hasError('server')) {
               {{ contactForm.get('message')?.getError('server') }}
@@ -171,11 +141,7 @@
           </div>
           }
 
-          <button
-            type="submit"
-            class="contact-us-form-btn"
-            [disabled]="submitting"
-          >
+          <button type="submit" class="contact-us-form-btn" [disabled]="submitting">
             @if (submitting) {
             Sending…
             } @else {
@@ -187,6 +153,28 @@
     </div>
   </div>
 </section>
+
+<!-- Thank You Dialog -->
+<p-dialog [(visible)]="showThankYouDialog" [modal]="true" [draggable]="false" [resizable]="false"
+  [style]="{ width: '90vw', 'max-width': '500px' }" header="" class="thank-you-dialog">
+  <div class="text-center py-4">
+    <div class="mb-4">
+      <mat-icon style="font-size: 64px; width: 64px; height: 64px; color: #4caf50;">check_circle</mat-icon>
+    </div>
+    <h2 class="mb-3" style="color: #2c3e50; font-weight: 600;">THANK YOU</h2>
+    <p class="text-muted mb-4" style="font-size: 1.1rem;">
+      Your enquiry has been successfully submitted. <br /> Our team will review your message and get back to you
+      shortly.
+    </p>
+    <button mat-flat-button color="primary" (click)="showThankYouDialog = false"
+      style="padding: 0 40px; height: 48px; border-radius: 24px;">
+      Close
+    </button>
+  </div>
+</p-dialog>
 <section class="contact-us-map-section">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14315.826735034905!2d72.54098218827362!3d23.022828438446705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e6ff9ceb05%3A0xfa22919acaa74575!2sKunte%20%26%20Modha!5e0!3m2!1sen!2sin!4v1762773879009!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14315.826735034905!2d72.54098218827362!3d23.022828438446705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84e6ff9ceb05%3A0xfa22919acaa74575!2sKunte%20%26%20Modha!5e0!3m2!1sen!2sin!4v1762773879009!5m2!1sen!2sin"
+    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>

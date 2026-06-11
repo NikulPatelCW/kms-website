@@ -28,7 +28,7 @@ export const LEGAL_CONTENT: Record<LegalContentKey, LegalDocument> = {
   'privacy-policy': {
     title: 'Privacy Policy',
     breadcrumb: 'Home - Privacy Policy',
-    lastUpdated: 'May 15, 2026',
+    lastUpdated: 'May 31, 2026',
     intro: [
       'This Privacy Policy explains how KMS Strategic Advisors Pvt. Ltd. (“KMS”, “we”, “our”, “us”) collects, uses, processes, stores, protects and discloses Personal Data when you access or use our website (“Site”).',
       'By accessing the Site, submitting information through the contact form, or accepting cookies, you provide explicit consent to the handling of your Personal Data in accordance with this Policy and applicable laws in India, including the Digital Personal Data Protection Act, 2023 (DPDPA) and the Information Technology Act, 2000 along with associated Rules.',
@@ -233,7 +233,7 @@ export const LEGAL_CONTENT: Record<LegalContentKey, LegalDocument> = {
   disclaimer: {
     title: 'Website Disclaimer',
     breadcrumb: 'Home - Disclaimer',
-    lastUpdated: 'May 15, 2026',
+    lastUpdated: 'May 31, 2026',
     intro: [
       'The information provided on this website (“Site”) by KMS Strategic Advisors Pvt. Ltd. (“KMS”, “we”, “our”, “us”) is intended solely for general informational and corporate presentation purposes.',
       'While KMS endeavors to provide accurate, updated, and reliable information, no assurance, guarantee or warranty (express or implied) is made regarding:',
@@ -366,7 +366,7 @@ export const LEGAL_CONTENT: Record<LegalContentKey, LegalDocument> = {
   'cookie-policy': {
     title: 'Cookie Policy',
     breadcrumb: 'Home - Cookie Policy',
-    lastUpdated: 'May 15, 2026',
+    lastUpdated: 'May 31, 2026',
     intro: [
       'This Cookie Policy explains how KMS Strategic Advisors Pvt. Ltd. (“KMS”, “we”, “our”, “us”) uses cookies and similar tracking technologies on this website (“Site”) to enhance user experience, analyse traffic, and improve performance.',
       'By continuing to browse or use this Site, you consent to our use of cookies in accordance with this Policy.',
@@ -499,7 +499,7 @@ export const LEGAL_CONTENT: Record<LegalContentKey, LegalDocument> = {
   'terms-of-use': {
     title: 'Terms of Use & Conditions',
     breadcrumb: 'Home - Terms of Use',
-    lastUpdated: 'May 15, 2026',
+    lastUpdated: 'May 31, 2026',
     intro: [
       'These Website Terms of Use & Conditions (“Terms”) constitute a legally binding agreement between KMS Strategic Advisors Pvt. Ltd., a limited liability partnership incorporated under the Limited Liability Partnership Act, 2008, having its registered office at 302, 3rd Floor, Shivalik-10, SBI Zonal Office, Ambawadi, Ahmedabad, Gujarat - 380015 (“KMS”, “we”, “us”, “our”) and any user (“you”, “your”, “User”) accessing or using this website (“Site”).',
       'By accessing, browsing, or using the Site, you acknowledge and agree that you have read, understood, and shall be bound by these Terms. If you do not agree, do not use this Site.',

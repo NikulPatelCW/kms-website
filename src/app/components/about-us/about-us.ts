@@ -89,7 +89,7 @@ export class AboutUs implements OnInit, AfterViewInit {
         'Investment & wealth advisory and management, merchant banking, I\u00A0banking & other finance functions',
         'Overseas relationship',
         'Due diligence',
-        'Taxation & transfer pricing',
+        'Taxation & transfer Pricing',
         'FEMA & Exchange regulations',
         'Compliance & secretarial',
       ],
@@ -163,7 +163,7 @@ export class AboutUs implements OnInit, AfterViewInit {
     },
     {
       title: 'Advisory & Solution',
-      details: ['Strategy to Create Value and Alignment'],
+      details: ['Value-added solutions','Strategy to Create Value and Alignment'],
     },
     {
       title: 'Implementation Strategies',

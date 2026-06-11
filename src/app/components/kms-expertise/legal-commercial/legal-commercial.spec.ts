@@ -37,7 +37,7 @@ describe('LegalCommercial', () => {
   });
 
   it('should have correct note content', () => {
-    expect(component.sections.note).toBe('Corporate and commercial Law | FEMA/RBI Regulations | Personal Laws | Mercantile and Economic Laws | IPRs | Commercial Relationships');
+    expect(component.sections.note).toBe('Corporate and Commercial Law | FEMA/RBI Regulations | Personal Laws | Mercantile and Economic Laws | IPRs | Commercial Relationships');
   });
 
   it('should have legal commercial content in paragraphs', () => {

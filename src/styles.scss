@@ -1036,6 +1036,14 @@ main {
     p {
       font-size: var(--fs-sub-title);
       color: var(--muted-text);
+      a{
+          color: var(--footer-title);
+          text-decoration: none;
+          &:hover{
+            color: var(--footer-title);
+            text-decoration: underline;
+          }
+        }
     }
   }
 

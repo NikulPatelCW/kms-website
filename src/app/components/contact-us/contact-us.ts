@@ -64,6 +64,7 @@ export class ContactUs implements OnInit, AfterViewInit {
   alertSuccess = false;
   alertDanger = false;
   alertMessage = '';
+  showThankYouDialog = false;
 
   recaptchaToken: string | null = null;
   recaptchaWidgetId: number | undefined;
@@ -75,7 +76,7 @@ export class ContactUs implements OnInit, AfterViewInit {
     fullName: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(120)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
     phone: ['', [Validators.required, Validators.pattern(this.phonePattern)]],
-    message: ['', [Validators.maxLength(5000)]],
+    message: ['', [Validators.required, Validators.maxLength(5000)]],
   });
 
   ngOnInit() {
@@ -132,8 +133,7 @@ export class ContactUs implements OnInit, AfterViewInit {
       .subscribe({
         next: (res) => {
           if (res.success) {
-            this.alertSuccess = true;
-            this.alertMessage = res.message;
+            this.showThankYouDialog = true;
             this.contactForm.reset();
             this.resetRecaptcha();
           } else {

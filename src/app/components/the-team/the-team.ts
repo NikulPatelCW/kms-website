@@ -27,7 +27,7 @@ export class TheTeam implements OnInit {
   teamTitle = 'The Minds Behind KMS';
   introParagraphs = [
     'At KMS Strategic Advisors Pvt Ltd, our strength lies in our people - a diverse and dynamic group of professionals united by a shared commitment to excellence, strategic thinking, and entrepreneurial spirit. With decades of collective experience across industries and functions, our team brings deep expertise, practical problem-solving skills, and client-first dedication to every engagement.',
-    'We are a multidisciplinary team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
+    'We are a team of thinkers and doers - Chartered Accountants, Advocates, Lawyers, Technologists, and Strategists - working collaboratively to deliver tailored solutions that drive growth, innovation, and long-term value for our clients. Every member brings a unique perspective, enriching how we understand challenges and shape outcomes.',
   ];
 
   teamMembers: TeamMember[] | any = [

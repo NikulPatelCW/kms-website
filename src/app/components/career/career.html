@@ -99,7 +99,8 @@
 
           <mat-form-field appearance="fill" class="w-100 mb-3">
             <mat-label>Phone</mat-label>
-            <input matInput type="tel" formControlName="phone" placeholder="Enter your phone number" autocomplete="tel" />
+            <input matInput type="tel" formControlName="phone" placeholder="Enter your phone number"
+              autocomplete="tel" />
             @if (careerForm.get('phone')?.invalid && careerForm.get('phone')?.touched) {
             <mat-error>
               @if (careerForm.get('phone')?.hasError('required')) {
@@ -114,27 +115,12 @@
           <!-- Drag & Drop File Upload -->
           <div class="career-upload-section mb-3">
             <label class="career-upload-label">Upload Your CV</label>
-            <div
-              class="career-dropzone"
-              [class.drag-over]="isDragOver"
-              [class.has-file]="uploadedFile"
-              [class.has-error]="fileError"
-              (dragover)="onDragOver($event)"
-              (dragleave)="onDragLeave($event)"
-              (drop)="onDrop($event)"
-              (click)="fileInput.click()"
-              role="button"
-              tabindex="0"
-              (keydown.enter)="fileInput.click()"
-              (keydown.space)="fileInput.click()"
-            >
-              <input
-                #fileInput
-                type="file"
-                accept=".pdf,.doc,.docx"
-                (change)="onFileSelected($event)"
-                hidden
-              />
+            <div class="career-dropzone" [class.drag-over]="isDragOver" [class.has-file]="uploadedFile"
+              [class.has-error]="fileError" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)"
+              (drop)="onDrop($event)" (click)="fileInput.click()" role="button" tabindex="0"
+              (keydown.enter)="fileInput.click()" (keydown.space)="fileInput.click()"
+              >
+              <input #fileInput type="file" accept=".pdf,.doc,.docx" (change)="onFileSelected($event)" hidden />
               @if (!uploadedFile) {
               <div class="dropzone-content">
                 <mat-icon class="upload-icon">cloud_upload</mat-icon>
@@ -149,12 +135,8 @@
                   <p class="file-name">{{ uploadedFile.name }}</p>
                   <p class="file-size">{{ getFileSize(uploadedFile.size) }}</p>
                 </div>
-                <button
-                  type="button"
-                  class="file-remove-btn"
-                  (click)="removeFile(); $event.stopPropagation()"
-                  aria-label="Remove file"
-                >
+                <button type="button" class="file-remove-btn" (click)="removeFile(); $event.stopPropagation()"
+                  aria-label="Remove file">
                   <mat-icon>close</mat-icon>
                 </button>
               </div>
@@ -188,4 +170,25 @@
       </div>
     </div>
   </div>
+
+  <!-- Thank You Dialog -->
+  <p-dialog [(visible)]="showThankYouDialog" [modal]="true" [draggable]="false" [resizable]="false"
+    [style]="{ width: '90vw', 'max-width': '500px' }" header="" class="thank-you-dialog">
+    <div class="text-center py-4">
+      <div class="mb-4">
+        <mat-icon style="font-size: 64px; width: 64px; height: 64px; color: #4caf50;">check_circle</mat-icon>
+      </div>
+      <h2 class="mb-3" style="color: #2c3e50; font-weight: 600;">THANK YOU</h2>
+      <p class="text-muted mb-4" style="font-size: 1.1rem;">
+        Thank you for applying to KMS Advisors. <br /><br />
+        We appreciate your interest in joining our team. Your application will be reviewed by our recruitment team.
+        <br /><br />
+        If your profile matches our current requirements, we will get in touch with you.
+      </p>
+      <button mat-flat-button color="primary" (click)="showThankYouDialog = false"
+        style="padding: 0 40px; height: 48px; border-radius: 24px;">
+        Close
+      </button>
+    </div>
+  </p-dialog>
 </section>

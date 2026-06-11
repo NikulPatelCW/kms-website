@@ -37,7 +37,7 @@ describe('TaxEfficiencies', () => {
   });
 
   it('should have correct note content', () => {
-    expect(component.sections.note).toBe('Direct Taxation | Tax Treaties | Transfer pricing | Global Taxation | Tax Efficiency and Structuring');
+    expect(component.sections.note).toBe('Direct Taxation | Tax Treaties | Transfer Pricing | Global Taxation | Tax Efficiency and Structuring');
   });
 
   it('should have tax efficiency content in paragraphs', () => {

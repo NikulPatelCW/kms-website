@@ -12,6 +12,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+// PrimeNG modules
+import { DialogModule } from 'primeng/dialog';
+
 export const SharedImports = [
   CommonModule,
   RouterModule,
@@ -26,4 +29,7 @@ export const SharedImports = [
   MatCardModule,
   MatTooltipModule,
   MatProgressSpinnerModule,
+
+  // PrimeNG
+  DialogModule,
 ];

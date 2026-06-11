@@ -1,9 +1,10 @@
 .g-recaptcha-host {
-  min-height: 78px;
+  min-height: 80px;
+  line-height: 0;
 }
 
 .contact-recaptcha-wrap {
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .contact-wrapper {

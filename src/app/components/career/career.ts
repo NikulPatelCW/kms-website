@@ -45,6 +45,7 @@ export class Career implements OnInit, AfterViewInit {
   alertSuccess = false;
   alertDanger = false;
   alertMessage = '';
+  showThankYouDialog = false;
   isDragOver = false;
   uploadedFile: File | null = null;
   fileError = '';
@@ -179,8 +180,7 @@ export class Career implements OnInit, AfterViewInit {
       .subscribe({
         next: (res) => {
           if (res.success) {
-            this.alertSuccess = true;
-            this.alertMessage = res.message;
+            this.showThankYouDialog = true;
             this.careerForm.reset();
             this.removeFile();
             this.resetRecaptcha();
